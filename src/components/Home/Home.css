@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+span{
+  font-family: 'Rubik Doodle Shadow', system-ui;
+
+}
+
+body {
+  font-family: Arial, sans-serif; /* You can change the font-family if needed */
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../../public/Home-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.home-decorate-image {
+  position: absolute;
+  top: 50%;
+  transform: translate(10%, -40%);
+}
+
+.home-decorate-image img {
+  height: 450px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+}
+
+.Logo {
+  position: relative;
+  transform: translate(20%, 3%);
+}
+.Logo img {
+  height: 80px;
+  transition: transform 0.5s ease;
+}
+.Logo img:hover{
+  transform: scale(1.1);
+}
+
+ul {
+  position: relative;
+  display: flex;
+  list-style: none;
+  gap: 45px;
+}
+ul a {
+  text-decoration: none;
+}
+
+.nav-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 23px;
+  font-weight: 500;
+  font-family: 'Cardo', serif;
+  color: #081c31;
+  padding: 10px;
+  transition: transform 0.5s ease;
+}
+
+.nav-container:hover {
+  color: #8cbcec;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(25px);
+  border-radius: 5px;
+  transform: translate(0%, 15%);
+}
+.social-icon {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+.social-icon img {
+  width: 45px;
+}
+.social-icon a {
+  transition: transform 0.3s ease;
+}
+.social-icon a:hover {
+  transform: scale(1.15);
+}
+
+.topic{
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  text-align: start;
+  right: 200px;
+  top: 35%;
+  color: #8cbcec;
+  font-size: 50px;
+  font-family: 'Cardo', serif;
+}
+.topic h1{
+  position: relative;
+  top: 10px;
+}
