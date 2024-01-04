@@ -16,6 +16,7 @@ function Home() {
 
   return (
     <div className="main-container">
+      <div className="blur"></div>
       <div className="home-decorate-image">
         <img src="./contactMailDark.svg" alt="Home-Screen" />
       </div>
