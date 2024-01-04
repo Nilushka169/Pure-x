@@ -11,7 +11,7 @@ span {
 }
 
 body {
-  font-family: Arial, sans-serif; /* You can change the font-family if needed */
+  font-family: Arial, sans-serif;
 }
 
 .main-container {
@@ -29,7 +29,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .home-decorate-image {
@@ -138,7 +138,12 @@ ul a {
     display: none;
   }
 }
-
+@media (max-width: 1171px) {
+  .topic {
+       font-size: 40px;
+    transform: translate(10%, -40%);
+  }
+  }
 @media (max-width: 1090px) {
   .social-icon-mobile {
     display: none;
