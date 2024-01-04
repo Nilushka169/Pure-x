@@ -18,7 +18,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(../../../public/Home-background.png);
+  background: linear-gradient(to bottom right, #ccffff 5%, #ccccff 70%);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -82,7 +82,7 @@ ul a {
 }
 
 .nav-container:hover {
-  color: #8cbcec;
+  color: #0a4581;
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(25px);
   border-radius: 5px;
@@ -110,7 +110,7 @@ ul a {
   text-align: start;
   right: 10%;
   top: 35%;
-  color: #8cbcec;
+  color: #0d365e;
   font-size: 50px;
   font-family: "Cardo", serif;
 }
