@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import { AiFillHome } from "react-icons/ai";
 import { FaExclamationCircle } from "react-icons/fa";
@@ -8,10 +8,19 @@ import { TiThMenuOutline } from "react-icons/ti";
 import { FaWindowClose } from "react-icons/fa";
 
 function Home() {
+  const [ismobileLinksOpen, setIsmobileLinksOpen] = useState(false);
+
+  const dropdownmenuclick = () => {
+    setIsmobileLinksOpen(!ismobileLinksOpen);
+  };
+
   return (
     <div className="main-container">
       <div className="blur"></div>
       <div className="home-decorate-image">
+        <img src="./contactMailDark.svg" alt="Home-Screen" />
+      </div>
+      <div className="home-decorate-image-mobile">
         <img src="./contactMailDark.svg" alt="Home-Screen" />
       </div>
 
@@ -21,7 +30,7 @@ function Home() {
             <img src="./logo.png" alt="Logo" />
           </a>
         </div>
-        <ul>
+        <ul className="main-uls">
           <a href="/">
             <li className="nav-container">
               <AiFillHome />
@@ -60,6 +69,53 @@ function Home() {
               <img src="./insta.png" alt="Instagram" />
             </a>
           </div>
+          <div className="dropdownmenu" onClick={dropdownmenuclick}>
+            {ismobileLinksOpen ? <FaWindowClose /> : <TiThMenuOutline />}
+          </div>
+          <div
+            className={ismobileLinksOpen ? "mobileLinks open" : "mobileLinks"}
+          >
+            <ul>
+              <a href="/">
+                <li>
+                  <AiFillHome />
+                  Home
+                </li>
+              </a>
+              <a href="/">
+                <li>
+                  <RiProjectorFill />
+                  Our Projects
+                </li>
+              </a>
+              <a href="/">
+                <li>
+                  <FaExclamationCircle />
+                  About us
+                </li>
+              </a>
+              <a href="/">
+                <li>
+                  <IoMailOpen />
+                  Contact us
+                </li>
+              </a>
+              <div className="social-icon-mobile">
+                <a href="/">
+                  <img src="./link.png" alt="linkedIn" />
+                </a>
+                <a href="/">
+                  <img src="./twi.png" alt="Twitter" />
+                </a>
+                <a href="/">
+                  <img src="./fb.png" alt="Facebook" />
+                </a>
+                <a href="/">
+                  <img src="./insta.png" alt="Instagram" />
+                </a>
+              </div>
+            </ul>
+          </div>
         </ul>
       </nav>
       <div className="topic">
@@ -67,8 +123,8 @@ function Home() {
           PURE-<span>X</span>
         </h1>
         <div className="second-topic">
-        <h3>Software</h3>
-        <h3>Solutions</h3>
+          <h3>Software</h3>
+          <h3>Solutions</h3>
         </div>
       </div>
     </div>
