@@ -120,7 +120,7 @@ function Home() {
       </nav>
       <div className="topic">
         <h1>
-          PURE-<span>X</span>
+          PURE<span>-X</span>
         </h1>
         <div className="second-topic">
           <h3>Software</h3>
