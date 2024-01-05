@@ -25,7 +25,7 @@ function Home() {
         >
           <div className="Logo">
             <a href="/">
-              <img src="./logo.png" alt="Logo" />
+              <img src="./images/logo.png" alt="Logo" />
             </a>
           </div>
           <ul className="main-uls">
@@ -55,16 +55,16 @@ function Home() {
             </a>
             <div className="social-icon">
               <a href="/">
-                <img src="./link.png" alt="linkedIn" />
+                <img src="./images/link.png" alt="linkedIn" />
               </a>
               <a href="/">
-                <img src="./twi.png" alt="Twitter" />
+                <img src="./images/twi.png" alt="Twitter" />
               </a>
               <a href="/">
-                <img src="./fb.png" alt="Facebook" />
+                <img src="./images/fb.png" alt="Facebook" />
               </a>
               <a href="/">
-                <img src="./insta.png" alt="Instagram" />
+                <img src="./images/insta.png" alt="Instagram" />
               </a>
             </div>
             <div className="dropdownmenu" onClick={dropdownmenuclick}>
@@ -100,16 +100,16 @@ function Home() {
                 </a>
                 <div className="social-icon-mobile">
                   <a href="/">
-                    <img src="./link.png" alt="linkedIn" />
+                    <img src="./images/link.png" alt="linkedIn" />
                   </a>
                   <a href="/">
-                    <img src="./twi.png" alt="Twitter" />
+                    <img src="./images/twi.png" alt="Twitter" />
                   </a>
                   <a href="/">
-                    <img src="./fb.png" alt="Facebook" />
+                    <img src="./images/fb.png" alt="Facebook" />
                   </a>
                   <a href="/">
-                    <img src="./insta.png" alt="Instagram" />
+                    <img src="./images/insta.png" alt="Instagram" />
                   </a>
                 </div>
               </ul>
@@ -125,8 +125,7 @@ function Home() {
           <h1>right</h1>
         </div>
       </section>
-      <div className="bottom">
-      </div>
+      <div className="bottom"></div>
     </div>
   );
 }
