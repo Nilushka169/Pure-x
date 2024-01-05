@@ -17,26 +17,7 @@ function Home() {
 
   return (
     <div className="main-container">
-      <div className="blur">
-        <div className="circle"></div>
-      </div>
-      <motion.div
-        className="home-decorate-image"
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 50, y: 180 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-      >
-        <img src="./contactMailDark.svg" alt="Home-Screen" />
-      </motion.div>
-      <motion.div
-        className="home-decorate-image-mobile"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-      >
-        <img src="./contactMailDark.svg" alt="Home-Screen" />
-      </motion.div>
-      <div className="nav-margin">
+      <section className="nav-margin">
         <motion.nav
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 10 }}
@@ -135,31 +116,16 @@ function Home() {
             </div>
           </ul>
         </motion.nav>
-      </div>
-      <div className="topic">
-        <motion.h1
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.2, duration: 0.4 }}
-        >
-          PURE<span>-X</span>
-        </motion.h1>
-        <div className="second-topic">
-          <motion.h3
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-          >
-            Software
-          </motion.h3>
-          <motion.h3
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-          >
-            Solutions
-          </motion.h3>
+      </section>
+      <section className="Middle-section">
+        <div className="Left-side">
+          <h1>left</h1>
         </div>
+        <div className="Right-side">
+          <h1>right</h1>
+        </div>
+      </section>
+      <div className="bottom">
       </div>
     </div>
   );
