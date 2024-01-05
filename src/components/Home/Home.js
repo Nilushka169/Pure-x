@@ -23,7 +23,7 @@ function Home() {
       <motion.div
         className="home-decorate-image"
         initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 50, y: 210 }}
+        whileInView={{ opacity: 1, x: 50, y: 180 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
         <img src="./contactMailDark.svg" alt="Home-Screen" />
