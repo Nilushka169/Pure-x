@@ -1,7 +1,14 @@
 
-.container{
+
+.main-container{
+    height:100vh ;
     position: relative;
-    transform: translate(20%, -50%);
+    
+}
+.container{
+    margin-top: auto;
+    position: relative;
+    transform: translate(20%, 0%);
     width: 1000px;
     height: 600px;
     background: white;
