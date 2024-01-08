@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import backgroundImage1 from "../../image/project1.png";
 import backgroundImage2 from "../../image/project2.jpg";
 import backgroundImage3 from "../../image/project3.webp";
@@ -36,7 +36,7 @@ function OurProjects() {
     },
   ];
 
-  const nextSlide = () => {
+ const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === items.length - 1 ? 0 : prevIndex + 1
     );
@@ -47,6 +47,21 @@ function OurProjects() {
       prevIndex === 0 ? items.length - 1 : prevIndex - 1
     );
   };
+
+  useEffect(() => {
+    // Add event listeners when the component mounts
+    const nextButton = document.querySelector(".next");
+    const prevButton = document.querySelector(".prev");
+
+    nextButton.addEventListener("click", nextSlide);
+    prevButton.addEventListener("click", prevSlide);
+
+    // Remove event listeners when the component unmounts
+    return () => {
+      nextButton.removeEventListener("click", nextSlide);
+      prevButton.removeEventListener("click", prevSlide);
+    };
+  }, []); // Empty dependency array ensures the effect runs only once during mount and cleanup during unmount
 
   return (
     <div className="container">
@@ -67,10 +82,10 @@ function OurProjects() {
       </div>
 
       <div className="button">
-        <button className="prev" onClick={prevSlide}>
+        <button className="prev">
           <i className="fa-solid fa-arrow-left"></i>
         </button>
-        <button className="next" onClick={nextSlide}>
+        <button className="next">
           <i className="fa-solid fa-arrow-right"></i>
         </button>
       </div>
