@@ -5,7 +5,7 @@ import OurProjects from './components/OurProjects/OurProjects';
 function App() {
   return (
     <div>
-      
+      <Home/>
       <OurProjects />
     </div>
   );
