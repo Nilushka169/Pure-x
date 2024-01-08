@@ -16,8 +16,9 @@ function Home() {
   };
 
   return (
+    
     <div className="main-container">
-      <section className="nav-margin">
+      <header className="nav-margin">
         <motion.nav
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 10 }}
@@ -116,15 +117,15 @@ function Home() {
             </div>
           </ul>
         </motion.nav>
-      </section>
-      <section className="Middle-section">
+      </header>
+      <div className="Middle-section">
         <div className="Left-side">
           <h1>left</h1>
         </div>
         <div className="Right-side">
           <h1>right</h1>
         </div>
-      </section>
+      </div>
       <div className="bottom"></div>
     </div>
   );
