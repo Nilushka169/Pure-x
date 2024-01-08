@@ -13,14 +13,15 @@ body {
 }
 
 .main-container {
-  position: relative;
   width: 100%;
   height: 100vh;
+   z-index: 99;
 }
 
 .nav-margin {
   display: flex;
   justify-content: center;
+ 
 }
 nav {
   position: fixed;
@@ -28,8 +29,10 @@ nav {
   align-items: center;
   justify-content: space-around;
   background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: 3;
   border-radius: 20px;
   width: 90%;
+  margin-bottom: 1%;
 }
 
 .Logo {
@@ -46,12 +49,14 @@ nav {
 }
 
 .Middle-section{
+  margin-top: 6rem;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 7%;
+  height: 60%;
+  background-color: blue;
 }
 
 .Left-side{
@@ -255,6 +260,7 @@ ul a {
     width: 100%;
     position: relative;
     justify-content: space-around;
+    margin-bottom: 3%;
   }
 }
 
