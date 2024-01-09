@@ -69,7 +69,7 @@ class App extends React.Component {
         <div className="full-page">
           <div className="side-container">
             <div className="pagename">
-              <h1>Projects</h1>
+              <div> Our Projects</div>
             </div>
           </div>
           <div className="Main-container">
