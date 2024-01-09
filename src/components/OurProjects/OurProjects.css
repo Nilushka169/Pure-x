@@ -1,10 +1,10 @@
 /* OurProjects.css */
 
-
 .Main-container{
     height: 100vh;
     margin: auto;
     display: flex;
+    overflow: hidden;
     position: relative;
 }
 .container {
