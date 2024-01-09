@@ -1,6 +1,5 @@
 /*Home.css*/
 
-
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +23,6 @@ body {
 .nav-margin {
   display: flex;
   justify-content: center;
- 
 }
 nav {
   display: flex;
@@ -50,7 +48,7 @@ nav {
   transform: scale(1.1);
 }
 
-.Middle-section{
+.Middle-section {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -59,12 +57,12 @@ nav {
   background-color: blue;
 }
 
-.Left-side{
+.Left-side {
   width: 40%;
   background-color: aqua;
   margin: auto;
 }
-.Right-side{
+.Right-side {
   width: 40%;
   background-color: #081c31;
   margin: auto;
@@ -114,8 +112,6 @@ ul a {
   transform: scale(1.15);
 }
 
-
-
 .mobileLinks {
   display: none;
 }
@@ -125,15 +121,67 @@ ul a {
 .social-icon-mobile {
   display: none;
 }
+
+/* bottom animation text section */
+.bottom-center{
+  position: absolute;
+  top: 93.5%;
+}
+.slider {
+  height: 12.5%;
+  width: 100%;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.slide {
+  overflow: hidden;
+  height: 45px;  
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.slide div div {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.2);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  margin-bottom: 45px;
+  padding: 5px;
+  justify-content: center;
+  word-spacing: 30px;
+  text-wrap: nowrap;
+}
+.slide div:nth-child(1) {
+  font-size: 1.5rem;
+  width: 100%;
+  animation: animate 6s linear infinite;
+}
+@keyframes animate {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+}
+
 @media (max-width: 1430px) {
   .social-icon-mobile {
     display: none;
   }
-  
 }
 @media (max-width: 1171px) {
-
- 
 }
 @media (max-width: 1195px) {
   .social-icon-mobile {
@@ -193,21 +241,17 @@ ul a {
 }
 
 @media (max-width: 1064px) {
-  
   .social-icon-mobile {
     display: none;
   }
   .mobileLinks {
     left: 40%;
   }
-
 }
 @media (max-width: 830px) {
-
   .social-icon-mobile {
     display: none;
   }
-
 }
 @media (max-width: 728px) {
   .circle {
@@ -220,7 +264,6 @@ ul a {
   .home-decorate-image img {
     width: 350px;
   }
-  
 }
 @media (max-width: 671px) {
   .social-icon-mobile {

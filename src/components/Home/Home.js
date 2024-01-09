@@ -16,7 +16,6 @@ function Home() {
   };
 
   return (
-    
     <div className="main-container">
       <header className="nav-margin">
         <motion.nav
@@ -126,7 +125,15 @@ function Home() {
           <h1>right</h1>
         </div>
       </div>
-      <div className="bottom"></div>
+      <div className="bottom">
+        <div className="bottom-center slider">
+          <div className="slide">
+          <div><div>JAVA   C   Python   C#   SQL   C++   PHP</div></div>
+          <div><div>JavaScript   JQuery   Angular.Js   React.Js   Express.Js   Node.js</div></div>
+          <div><div>ReactNative   Kotlin   Dart   Flutter</div></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
