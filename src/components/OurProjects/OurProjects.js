@@ -6,12 +6,54 @@ class App extends React.Component {
     super(props);
     this.state = {
       items: [
-        { id: 1, backgroundImage: 'url(1.jpg)' },
-        { id: 2, backgroundImage: 'url(2.jpg)' },
-        { id: 3, backgroundImage: 'url(3.png)' },
-        { id: 4, backgroundImage: 'url(4.jpg)' },
-        { id: 5, backgroundImage: 'url(5.png)' },
-        { id: 6, backgroundImage: 'url(6.jpg)' },
+        {
+          id: 1,
+          backgroundImage: "url(1.jpeg)",
+          content: {
+            name: "Project 1",
+            description: "Content for Project 1",
+          },
+        },
+        {
+          id: 2,
+          backgroundImage: "url(2.jpg)",
+          content: {
+            name: "Project 2",
+            description: "Content for Project 2",
+          },
+        },
+        {
+          id: 3,
+          backgroundImage: "url(1.jpeg)",
+          content: {
+            name: "Project 3",
+            description: "Content for Project 3",
+          },
+        },
+        {
+          id: 4,
+          backgroundImage: "url(2.jpg)",
+          content: {
+            name: "Project 4",
+            description: "Content for Project 4",
+          },
+        },
+        {
+          id: 5,
+          backgroundImage: "url(1.jpeg)",
+          content: {
+            name: "Project 5",
+            description: "Content for Project 5",
+          },
+        },
+        {
+          id: 6,
+          backgroundImage: "url(2.jpg)",
+          content: {
+            name: "Project 6",
+            description: "Content for Project 6",
+          },
+        },
       ],
     };
   }
@@ -27,7 +69,7 @@ class App extends React.Component {
         <div className="full-page">
           <div className="side-container">
             <div className="pagename">
-              <h1>Projects</h1>
+              <div> Our Projects</div>
             </div>
           </div>
           <div className="Main-container">
@@ -40,11 +82,8 @@ class App extends React.Component {
                     style={{ backgroundImage: item.backgroundImage }}
                   >
                     <div className="content">
-                      <div className="name">LUNDEV</div>
-                      <div className="des">
-                        Tinh ru anh di chay pho, chua kip chay pho thi anhchay
-                        mat tieu
-                      </div>
+                      <div className="name">{item.content.name}</div>
+                      <div className="des">{item.content.description}</div>
                       <button>See more</button>
                     </div>
                   </div>
