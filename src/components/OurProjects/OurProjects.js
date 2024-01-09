@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './OurProjects.css'; // Make sure to import your CSS file
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 class App extends React.Component {
   constructor(props) {
@@ -23,13 +23,6 @@ class App extends React.Component {
       items: [...prevState.items.slice(1), prevState.items[0]],
     }));
   };
-
-  handlePrev = () => {
-    this.setState((prevState) => ({
-      items: [prevState.items[prevState.items.length - 1], ...prevState.items.slice(0, -1)],
-    }));
-  };
-
   render() {
     return (
       <div className='Main-container'>
@@ -48,9 +41,6 @@ class App extends React.Component {
           ))}
         </div>
         <div className="buttons">
-          <button id="prev" onClick={this.handlePrev}>
-            <FontAwesomeIcon icon={faAngleLeft} />
-          </button>
           <button id="next" onClick={this.handleNext}>
             <FontAwesomeIcon icon={faAngleRight} />
           </button>
