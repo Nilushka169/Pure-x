@@ -1,7 +1,5 @@
 import React from 'react';
 import './OurProjects.css'; // Make sure to import your CSS file
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 class App extends React.Component {
   constructor(props) {
@@ -25,28 +23,42 @@ class App extends React.Component {
   };
   render() {
     return (
-      <div className='Main-container'>
-      <div className="container">
-        <div id="slide">
-          {this.state.items.map((item) => (
-            <div key={item.id} className="item" style={{ backgroundImage: item.backgroundImage }}>
-              <div className="content">
-                <div className="name">LUNDEV</div>
-                <div className="des">
-                  Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
-                </div>
-                <button>See more</button>
+      <>
+        <div className="full-page">
+          <div className="side-container">
+            <div className="pagename">
+              <h1>Projects</h1>
+            </div>
+          </div>
+          <div className="Main-container">
+            <div className="container">
+              <div id="slide">
+                {this.state.items.map((item) => (
+                  <div
+                    key={item.id}
+                    className="item"
+                    style={{ backgroundImage: item.backgroundImage }}
+                  >
+                    <div className="content">
+                      <div className="name">LUNDEV</div>
+                      <div className="des">
+                        Tinh ru anh di chay pho, chua kip chay pho thi anhchay
+                        mat tieu
+                      </div>
+                      <button>See more</button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="buttons">
+                <button id="next" onClick={this.handleNext}>
+                  <i class="fa-solid fa-share"> NEXT</i>
+                </button>
               </div>
             </div>
-          ))}
+          </div>
         </div>
-        <div className="buttons">
-          <button id="next" onClick={this.handleNext}>
-            <FontAwesomeIcon icon={faAngleRight} />
-          </button>
-        </div>
-      </div>
-      </div>
+      </>
     );
   }
 }
