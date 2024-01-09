@@ -1,14 +1,10 @@
 /* OurProjects.css */
 
-body {
-  background-color: #eaeaea;
-  overflow-x: hidden;
-  overflow-y: scroll;
 
-}
 .Main-container{
     height: 100vh;
     margin: auto;
+    display: flex;
     position: relative;
 }
 .container {
@@ -16,14 +12,17 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 1240px;
-  height: 700px;
+  width: 1000px;
+  height: 600px;
   padding: 50px;
   background-color: #f5f5f5;
   box-shadow: 0 30px 50px #dbdbdb;
 }
 
-
+#slide {
+  width: max-content;
+  margin-top: 50px;
+}
 
 .item {
   width: 200px;
@@ -35,9 +34,9 @@ body {
   position: absolute;
   z-index: 1;
   top: 50%;
-  transform: translate(100%, 20%);
+  transform: translate(0, -50%);
   border-radius: 20px;
-  box-shadow: 0 30px 50px #5f5f62;
+  box-shadow: 0 30px 50px #505050;
 }
 
 .item:nth-child(1),
@@ -133,12 +132,8 @@ body {
   border-radius: 50%;
   border: 1px solid #555;
   transition: 0.5s;
-  font-size: 20px;
-  transition: 0.7s;
 }
 
 .buttons button:hover {
-  background-color: #4d4c52;
-  color: #eaeaea;
-  font-size: 30px;
+  background-color: #bac383;
 }
