@@ -166,19 +166,43 @@ margin: 0;
   transform: scaleX(1.1);
 }
 
+/* DesCard.css */
+.DesCard {
+  display: none;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  position: absolute;
+  width: 130%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  left: 100%;
+  top: 50%;
+  transform: translate(0,-50%);
+  transition: 0.7s;
+}
+.DesCard h1{
+  text-align: center;
+  text-transform: uppercase;
+}
+.DesCard p{
+  text-transform: capitalize;
+  text-align: justify;
+}
 
-@media (max-width:850px){
-  .item {
-  width: 22%;
-  height: 18%;
-  transform: translate(60%, -50%);
-}
-.item:nth-child(3) {
-  left: 50%;
+.DesCard.open {
+  display: block;
 }
 
-.item:nth-child(4) {
-  left: calc(50% + 23%);
-}
+
+.dropdowndes {
+  cursor: pointer;
+  color: #000;
+  background-color: #dbdbdb;
+  width: fit-content;
+  padding: 5px;
+  padding-inline: 15px;
 
 }
+

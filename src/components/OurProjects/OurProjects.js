@@ -1,5 +1,8 @@
-import React from 'react';
+/* import React from 'react';
 import './OurProjects.css'; // Make sure to import your CSS file
+import { FaAngleDoubleRight } from "react-icons/fa";
+import { FaAngleDoubleLeft } from "react-icons/fa";
+
 
 class App extends React.Component {
   constructor(props) {
@@ -64,6 +67,11 @@ class App extends React.Component {
     }));
   };
   render() {
+    const [isDesCardOpen, setIsDesCardOpen] = useState(false);
+
+    const dropdowndesclick = () => {
+      setIsDesCardOpen(!isDesCardOpen);
+    };
     return (
       <>
         <div className="full-page">
@@ -84,7 +92,12 @@ class App extends React.Component {
                     <div className="content">
                       <div className="name">{item.content.name}</div>
                       <div className="des">{item.content.description}</div>
-                      <button>See more</button>
+                      <div className="dropdowndes" onClick={dropdowndesclick}>
+                            {isDesCardOpen ? <FaAngleDoubleLeft /> : <FaAngleDoubleRight />}
+                      </div>
+                      <div className={isDesCardOpen ? "DesCard open" : "DesCard"}>
+        
+                    </div>
                     </div>
                   </div>
                 ))}
@@ -92,6 +105,152 @@ class App extends React.Component {
               <div className="buttons">
                 <button id="next" onClick={this.handleNext}>
                   <i class="fa-solid fa-share"> NEXT</i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+}
+
+export default App;
+ */
+import React from "react";
+import "./OurProjects.css"; // Make sure to import your CSS file
+import { FaAngleDoubleRight, FaAngleDoubleLeft } from "react-icons/fa";
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [
+        {
+          id: 1,
+          backgroundImage: "url(1.jpeg)",
+          content: {
+            name: "Project 1",
+            description: "Content for Project 1",
+          },
+          des: {
+            topic: "topic 1",
+            description: "description 1",
+          },
+        },
+        {
+          id: 2,
+          backgroundImage: "url(2.jpg)",
+          content: {
+            name: "Project 2",
+            description: "Content for Project 2",
+          },
+          des: {
+            topic: "topic 2",
+            description: "description 2",
+          },
+        },
+        {
+          id: 3,
+          backgroundImage: "url(1.jpeg)",
+          content: {
+            name: "Project 3",
+            description: "Content for Project 3",
+          },
+          des: {
+            topic: "topic 3",
+            description: "description 3",
+          },
+        },
+        {
+          id: 4,
+          backgroundImage: "url(2.jpg)",
+          content: {
+            name: "Project 4",
+            description: "Content for Project 4",
+          },
+          des: {
+            topic: "topic 4",
+            description: "description 4",
+          },
+        },
+        {
+          id: 5,
+          backgroundImage: "url(1.jpeg)",
+          content: {
+            name: "Project 5",
+            description: "Content for Project 5",
+          },
+          des: {
+            topic: "topic 5",
+            description: "description 5",
+          },
+        },
+        {
+          id: 6,
+          backgroundImage: "url(2.jpg)",
+          content: {
+            name: "Project 6",
+            description: "Content for Project 6",
+          },
+          des: {
+            topic: "topic 6",
+            description: "description 6",
+          },
+        },
+      ],
+      isDesCardOpen: false,
+    };
+  }
+
+  handleNext = () => {
+    this.setState((prevState) => ({
+      items: [...prevState.items.slice(1), prevState.items[0]],
+    }));
+  };
+
+  dropdowndesclick = () => {
+    this.setState({ isDesCardOpen: !this.state.isDesCardOpen });
+  };
+
+  render() {
+    const { isDesCardOpen } = this.state;
+    return (
+      <>
+        <div className="full-page">
+          <div className="side-container">
+            <div className="pagename">
+              <div> Our Projects</div>
+            </div>
+          </div>
+          <div className="Main-container">
+            <div className="container">
+              <div id="slide">
+                {this.state.items.map((item) => (
+                  <div
+                    key={item.id}
+                    className="item"
+                    style={{ backgroundImage: item.backgroundImage }}
+                  >
+                    <div className="content">
+                      <div className="name">{item.content.name}</div>
+                      <div className="des">{item.content.description}</div>
+                      <div className="dropdowndes" onClick={this.dropdowndesclick}>
+                        {isDesCardOpen ? (<FaAngleDoubleLeft />) : (<FaAngleDoubleRight />)}
+                      </div>
+                      <div
+                        className={isDesCardOpen ? "DesCard open" : "DesCard"}
+                      >
+                        <h1>{item.des.topic}</h1>
+                        <p>{item.des.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="buttons">
+                <button id="next" onClick={this.handleNext}>
+                  NEXT
                 </button>
               </div>
             </div>
