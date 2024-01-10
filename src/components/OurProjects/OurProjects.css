@@ -92,8 +92,8 @@ margin: 0;
 
 .item .content {
   position: absolute;
-  top: 50%;
-  left: 100px;
+  top: 40%;
+  left: 5%;
   width: 300px;
   text-align: left;
   padding: 0;
