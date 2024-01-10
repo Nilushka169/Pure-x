@@ -12,16 +12,16 @@
   position: relative;
   top: 50%;
   color: rgba(0, 0, 0, 0.2);
-  transform: translate(0,-50%);
+  transform: translate(0, -50%);
   writing-mode: vertical-lr;
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: bolder;
   letter-spacing: 5px;
-font-family: 'Montserrat', sans-serif;
-line-height: 1;
-padding: 0;
-margin: 0;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
 }
 .Main-container {
   flex: 0 0 97%;
@@ -94,7 +94,7 @@ margin: 0;
   position: absolute;
   top: 40%;
   left: 5%;
-  width: 300px;
+  width: 20%;
   text-align: left;
   padding: 0;
   color: #eee;
@@ -169,32 +169,67 @@ margin: 0;
 /* DesCard.css */
 .DesCard {
   display: none;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
-  position: absolute;
-  width: 130%;
-  height: 100%;
+  width: 150%;
+  height: 200%;
   border: none;
   border-radius: 20px;
   padding: 5px;
+  position: absolute;
   left: 100%;
   top: 50%;
-  transform: translate(0,-50%);
-  transition: 0.7s;
+  transform: translate(0, -25%);
+  overflow: hidden;
+
 }
-.DesCard h1{
+.DesCard h1 {
   text-align: center;
   text-transform: uppercase;
 }
-.DesCard p{
+.DesCard p {
   text-transform: capitalize;
   text-align: justify;
+  overflow-y: auto;
+  height: 100%;
+  line-height: 1.6;
+  padding: 20px;
 }
-
 .DesCard.open {
   display: block;
 }
 
+
+/* Scrollbar styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #969696 #DFE9EB;
+}
+
+*::-webkit-scrollbar {
+  width: 9px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #DFE9EB;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #969696;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #19055a;
+}
 
 .dropdowndes {
   cursor: pointer;
@@ -203,6 +238,4 @@ margin: 0;
   width: fit-content;
   padding: 5px;
   padding-inline: 15px;
-
 }
-
