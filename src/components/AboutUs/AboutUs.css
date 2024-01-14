@@ -25,12 +25,14 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 0;
+  top: 150px;
   left: 0;
+  width: 100%;
 }
 
 .social-icon {
   display: flex;
+  margin-top: 10px;
 }
 
 .social-icon img {
