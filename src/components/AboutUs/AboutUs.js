@@ -69,7 +69,7 @@ function AboutUs() {
   };
 
   return (
-    <div className="main-container">
+    <div className="aboutUs-main-container">
       {items.map((item, index) => (
         <div
           key={item.id}
@@ -85,9 +85,9 @@ function AboutUs() {
                   className="profilePic"
                   alt="profile"
                 />
-                <div className="position">{item.profile.position}</div>
-                <div className="name">{item.profile.name}</div>
-                <div className="social-icon">
+                <h1 className="position">{item.profile.position}</h1>
+                <h2 className="name">{item.profile.name}</h2>
+                <div className="social-icons">
                   <a href={item.social.linkedin}>
                     <img src="./images/link.png" alt="linkedIn" />
                   </a>
