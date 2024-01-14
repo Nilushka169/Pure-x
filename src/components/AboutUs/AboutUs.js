@@ -32,6 +32,34 @@ function AboutUs() {
         instagram: "",
       },
     },
+    {
+      id: 3,
+      profile: {
+        picture: img1,
+        position: "position 1",
+        name: "person 1",
+      },
+      social: {
+        linkedin: "",
+        twitter: "",
+        facebook: "",
+        instagram: "",
+      },
+    },
+    {
+      id: 3,
+      profile: {
+        picture: img1,
+        position: "position 1",
+        name: "person 1",
+      },
+      social: {
+        linkedin: "",
+        twitter: "",
+        facebook: "",
+        instagram: "",
+      },
+    },
   ]);
 
   const [activeCard, setActiveCard] = useState(null);
