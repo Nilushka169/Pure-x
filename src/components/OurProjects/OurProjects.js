@@ -1,5 +1,5 @@
 import React from "react";
-import "./OurProjects.css"; // Make sure to import your CSS file
+import "./OurProjects.css";
 import { FaAngleDoubleRight, FaAngleDoubleLeft } from "react-icons/fa";
 
 class App extends React.Component {
