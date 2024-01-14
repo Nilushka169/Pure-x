@@ -6,8 +6,9 @@ body {
   align-items: center;
   justify-content: center;
 }
-.item{
-    display: flex;
+.front{
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -31,7 +32,7 @@ body {
 }
 
 .card-inner {
-  width: 30%;
+  width: 200px;
   height: 70%;
   transform-style: preserve-3d;
   transition: transform 0.8s ease;
@@ -47,4 +48,12 @@ body {
 
 .back {
   transform: rotateY(180deg);
+}
+
+
+
+
+
+.profilePic{
+  width: 50px;
 }

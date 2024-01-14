@@ -7,7 +7,7 @@ function AboutUs() {
     {
       id: 1,
       profile: {
-        picture: "",
+        picture: img2,
         position: "position 1",
         name: "person 1",
       },
@@ -36,7 +36,7 @@ function AboutUs() {
                 <div key={item.id} className="item">
                   {/* front */}
                   <div className="front">
-                    <div className="profilePic">{item.profile.picture}</div>
+                    <img src={item.profile.picture} className="profilePic"/>
                     <div className="position">{item.profile.position}</div>
                     <div className="name">{item.profile.name}</div>
                     <div className="social-icon">
