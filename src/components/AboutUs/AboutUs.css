@@ -1,10 +1,12 @@
-body {
-  background-color: #19176bee;
-}
-.card-container{
-  display: flex;
+.main-container{
+  display: grid;
+  height: 100vh;
   align-items: center;
   justify-content: center;
+
+}
+.card-container{
+  border: 1px solid;
 }
 .front{
   display: flex;
@@ -32,7 +34,7 @@ body {
 }
 
 .card-inner {
-  width: 200px;
+  width: 30%;
   height: 70%;
   transform-style: preserve-3d;
   transition: transform 0.8s ease;

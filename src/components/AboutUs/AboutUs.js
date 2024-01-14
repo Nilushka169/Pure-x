@@ -1,13 +1,27 @@
 import React, { useState } from "react";
 import "./AboutUs.css";
-import img2 from "../../image/person2.png";
+import img1 from "../../image/person2.png";
 
 function AboutUs() {
   const [items] = useState([
     {
       id: 1,
       profile: {
-        picture: img2,
+        picture: img1,
+        position: "position 1",
+        name: "person 1",
+      },
+      social: {
+        linkedin: "",
+        twitter: "",
+        facebook: "",
+        instagram: "",
+      },
+    },
+    {
+      id: 2,
+      profile: {
+        picture: img1,
         position: "position 1",
         name: "person 1",
       },
@@ -28,7 +42,7 @@ function AboutUs() {
 
   return (
     <div>
-      <div className="centered">
+      <div className="main-container">
         <div onClick={handleFlip} className={`card-container`}>
           <div className={`card ${activeCard ? "cardFlip" : ""}`}>
             <div className="card-inner">
@@ -53,12 +67,11 @@ function AboutUs() {
                         <img src="./images/insta.png" alt="Instagram" />
                       </a>
                     </div>
-                    <div className="nothing">See more...</div>
                   </div>
 
                   {/* back */}
                   <div className="back">
-                    <img src={img2} alt="backimage" className="img" />
+                    <img src={img1} alt="back image" className="back" />
                   </div>
                 </div>
               ))}
