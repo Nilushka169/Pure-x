@@ -1,20 +1,22 @@
 body {
   background-color: #19176bee;
 }
-
-.centered {
+.card-container{
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-
-.img {
-  width: 200px;
-  height: 300px;
+.item{
+    display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.card-container {
-  perspective: 1000px;
+.social-icon{
+  display: flex;
+}
+.social-icon img{
+  width: 40px;
+  padding: 5px;
 }
 
 .card {
@@ -29,8 +31,8 @@ body {
 }
 
 .card-inner {
-  width: 100%;
-  height: 100%;
+  width: 30%;
+  height: 70%;
   transform-style: preserve-3d;
   transition: transform 0.8s ease;
 }

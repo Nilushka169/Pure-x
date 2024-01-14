@@ -1,47 +1,24 @@
 import React, { useState } from "react";
 import "./AboutUs.css";
-import img2 from "../../image/back.png";
+import img2 from "../../image/person2.png";
 
 function AboutUs() {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [
-        {
-          id: 1,
-          profile: {
-            picture: "url(person1.jpg)",
-            position: "position 1",
-            name: "person 1"
-          },
-          social: {
-            linkedin: "",
-            twitter:"",
-            facebook:"",
-            instagram:"",
-            },
-        },
-        {
-          id: 2,
-          profile: {
-            picture: "url(person2.jpg)",
-            position: "position 2",
-            name: "person 2"
-          },
-          social: {
-            linkedin: "",
-            twitter:"",
-            facebook:"",
-            instagram:"",
-            },
-        },
-        
-      ],
-    };
-  }
-
-
+  const [items] = useState([
+    {
+      id: 1,
+      profile: {
+        picture: "",
+        position: "position 1",
+        name: "person 1",
+      },
+      social: {
+        linkedin: "",
+        twitter: "",
+        facebook: "",
+        instagram: "",
+      },
+    },
+  ]);
 
   const [activeCard, setActiveCard] = useState(false);
 
@@ -51,11 +28,11 @@ function AboutUs() {
 
   return (
     <div>
-      <div className="h-screen centered">
+      <div className="centered">
         <div onClick={handleFlip} className={`card-container`}>
           <div className={`card ${activeCard ? "cardFlip" : ""}`}>
             <div className="card-inner">
-              {this.state.items.map((item) => (
+              {items.map((item) => (
                 <div key={item.id} className="item">
                   {/* front */}
                   <div className="front">
@@ -81,7 +58,7 @@ function AboutUs() {
 
                   {/* back */}
                   <div className="back">
-                    <img src={img2} alt="image" className="img" />
+                    <img src={img2} alt="backimage" className="img" />
                   </div>
                 </div>
               ))}
