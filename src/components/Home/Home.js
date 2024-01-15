@@ -74,25 +74,25 @@ function Home() {
               className={ismobileLinksOpen ? "mobileLinks open" : "mobileLinks"}
             >
               <ul>
-                <a href="/">
+                <a href="Home">
                   <li>
                     <AiFillHome />
                     Home
                   </li>
                 </a>
-                <a href="/">
+                <a href="#OurProjects">
                   <li>
                     <RiProjectorFill />
                     Our Projects
                   </li>
                 </a>
-                <a href="/">
+                <a href="#AboutUs">
                   <li>
                     <FaExclamationCircle />
                     About us
                   </li>
                 </a>
-                <a href="/">
+                <a href="ContactUs">
                   <li>
                     <IoMailOpen />
                     Contact us

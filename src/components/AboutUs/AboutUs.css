@@ -1,77 +1,113 @@
-.aboutUs-main-container {
+.full-page {
   display: flex;
   height: 100vh;
-  align-items: center;
-  justify-content: space-around;
+  overflow: hidden;
 }
 
-.card {
-  background-color: rgb(217, 217, 217);
-  width: 20rem;
-  height: 30rem;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 30px 50px #8c8c8c;
-  transform-style: preserve-3d;
-  transition: transform 0.8s ease;
-  cursor: pointer;
-}
-.card .card-inner .front .profilePic {
-  border: 2px solid black;
-  border-radius: 50%;
-  width: 75%;
+.aboutUs-main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow-y: auto;
+  height: 100%;
 }
 
 .card-container {
-  display: flex;
+  margin: 20px;
+}
+.card-container.active{
+  pointer-events: none;
 }
 
-.front,
-.back {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  padding-top: 15px;
-  width: 100%;
-  backface-visibility: hidden;
-}
-.social-icons{
-  display: flex;
-  justify-content: space-around;
-}
-.social-icons a{
-  margin-right: 10px;
-  margin-top: 100px;
-}
-.social-icons img {
-  width: 40px;
-}
-
-.cardFlip {
-  transform: rotateY(180deg);
-}
-
-.card-inner {
-  align-items: center;
+.card {
+  width: 280px;
+  height: 420px;
   transform-style: preserve-3d;
   transition: transform 0.8s ease;
+  cursor: pointer;
+  position: relative;
 }
 
-.back {
+.cardFlip{
   transform: rotateY(180deg);
-  backface-visibility: hidden;
 }
-
-.profilePic {
-  width: 50px;
-}
-
-.back-image {
+.card .card-inner {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  position: absolute;
 }
-.backBackground {
-  background-color: rgb(196, 195, 194);
+
+.card .card-inner .front,
+.card .card-inner .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #0e3e66 ;
+  border-radius: 0px 0px 30px 30px;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+.card .card-inner .front h2,h3,
+.card .card-inner .back h1{
+    text-transform: uppercase;
+}
+
+.card .card-inner .front {
+  background-color: #ffffff;
+}
+.card .card-inner .front:hover {
+background-color: #dfdef7;
+}
+.card .card-inner .front:hover .profilePic-container .profilePic {
+  transform: translateY(15px);
+  transition: transform 0.3s ease-in;
+}
+
+.card .card-inner .back {
+  background-color: #c8bfe5;
+  transform: rotateY(180deg);
+}
+.card .card-inner .front .profilePic-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+}
+.card .card-inner .front .profilePic-container .profileBackground{
+  background-color: #0e3e66;
+  width: 100%;
+  height: 35%;
+  position: absolute;
+  border-radius: 0% 0% 50% 50%;
+  top: 0px;
+}
+
+.card .card-inner .front .profilePic-container .profilePic {
+  width: 150px;
+  height: 150px;
+  background-color: #ffffff;
+  border: 3px solid white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.card .card-inner .front .social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.card .card-inner .front .social-icons a {
+  text-decoration: none;
+  color: #333;
+}
+
+.card .card-inner .front .social-icons img {
+  width: 30px;
 }
