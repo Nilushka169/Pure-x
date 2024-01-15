@@ -35,10 +35,9 @@
   left: 0%;
   top: 50%;
   transform: translate(0%, -50%);
-  width: 95%;
+  width: 100%;
   height: 97%;
   padding: 50px;
-  background-color: #f5f5f5;
   box-shadow: 0 30px 50px #dbdbdb;
 }
 
@@ -57,9 +56,9 @@
   position: absolute;
   z-index: 1;
   top: 50%;
-  transform: translate(50%, -50%);
+  transform: translate(35%, -50%);
   border-radius: 20px;
-  box-shadow: 0 30px 50px #505050;
+  box-shadow: 0px 15px 50px #505050;
 }
 
 .item:nth-child(1),
@@ -121,12 +120,18 @@
   animation: showcontent 0.5s ease-in-out 0.1s 1 forwards;
 }
 
-.item button {
-  padding: 10px 20px;
+.item .dropdowndes {
   border: none;
   opacity: 0;
   animation: showcontent 0.5s ease-in-out 0.2s 1 forwards;
 }
+.item .DesCard {
+  border: none;
+  opacity: 0;
+  animation: showcontent 0.2s ease-in-out 0s forwards;
+}
+
+
 
 @keyframes showcontent {
   from {
@@ -228,7 +233,7 @@
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: #19055a;
+  background-color: #4e4e4e;
 }
 
 .dropdowndes {
