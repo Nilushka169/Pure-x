@@ -7,7 +7,7 @@
 .aboutUs-main-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   overflow-y: auto;
   height: 100%;
 }
@@ -20,7 +20,7 @@
 }
 
 .card {
-  width: 280px;
+  width: 550px;
   height: 420px;
   transform-style: preserve-3d;
   transition: transform 0.8s ease;
@@ -48,29 +48,30 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid #0e3e66 ;
-  border-radius: 0px 0px 30px 30px;
   backface-visibility: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
-.card .card-inner .front h2,h3,
+.card .card-inner .front h1,h5,
 .card .card-inner .back h1{
     text-transform: uppercase;
 }
-
+.card .card-inner .front h1{
+  color: #1b588a;
+}
 .card .card-inner .front {
   background-color: #ffffff;
 }
-.card .card-inner .front:hover {
-background-color: #dfdef7;
+.card .card-inner .front:hover  h1 {
+  color: #369aec;
+    transition: 0.3s;
 }
 .card .card-inner .front:hover .profilePic-container .profilePic {
-  transform: translateY(15px);
-  transition: transform 0.3s ease-in;
+  transform: scale(1.1);
+  transition: transform 0.7s ease-in;
 }
 
 .card .card-inner .back {
-  background-color: #c8bfe5;
+  background-color: #ffffff;
   transform: rotateY(180deg);
 }
 .card .card-inner .front .profilePic-container{
@@ -78,36 +79,40 @@ background-color: #dfdef7;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 60%;
+  height: 55%;
 }
 .card .card-inner .front .profilePic-container .profileBackground{
-  background-color: #0e3e66;
+  background-color: #ebeaea;
   width: 100%;
-  height: 35%;
+  height: 30%;
   position: absolute;
-  border-radius: 0% 0% 50% 50%;
-  top: 0px;
+  border-radius: 100% 0% 50% 50% / 0% 0% 100% 100% ;
+  top: 0;
 }
 
 .card .card-inner .front .profilePic-container .profilePic {
-  width: 150px;
-  height: 150px;
-  background-color: #ffffff;
-  border: 3px solid white;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   z-index: 1;
 }
 
 .card .card-inner .front .social-icons {
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
 .card .card-inner .front .social-icons a {
   text-decoration: none;
-  color: #333;
+  color: #676767;
+  font-size: 30px;
 }
-
-.card .card-inner .front .social-icons img {
-  width: 30px;
+.card .card-inner .front .social-icons .facebook:hover{
+  color: #082e76;
+}
+.card .card-inner .front .social-icons .twitter:hover{
+  color: #528be7;
+}
+.card .card-inner .front .social-icons .linkedin:hover{
+  color: #da0404;
 }
