@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./AboutUs.css";
-import img1 from "../../image/person2.png";
+import img1 from "../../image/person1.webp";
 import PageName from "../PageName";
+import { BsFacebook } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 
 function AboutUs() {
   const [items] = useState([
@@ -61,118 +64,7 @@ function AboutUs() {
         instagram: "",
       },
     },
-    {
-      id: 1,
-      profile: {
-        picture: img1,
-        position: "position 5",
-        name: "person 5",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
-      },
-    },
-    {
-      id: 1,
-      profile: {
-        picture: img1,
-        position: "position 6",
-        name: "person 6",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
-      },
-    },
-    {
-      id: 1,
-      profile: {
-        picture: img1,
-        position: "position 7",
-        name: "person 7",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
-      },
-    },
-    {
-      id: 1,
-      profile: {
-        picture: img1,
-        position: "position 8",
-        name: "person 8",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
-      },
-    },
-    {
-      id: 1,
-      profile: {
-        picture: img1,
-        position: "position 9",
-        name: "person 9",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
-      },
-    },
-    {
-      id: 1,
-      profile: {
-        picture: img1,
-        position: "position 10",
-        name: "person 10",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
-      },
-    },
-    {
-      id: 1,
-      profile: {
-        picture: img1,
-        position: "position 11",
-        name: "person 11",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
-      },
-    },
-    {
-      id: 1,
-      profile: {
-        picture: img1,
-        position: "position 12",
-        name: "person 12",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
-      },
-    },
+    
   ]);
 
   const [activeCard, setActiveCard] = useState(null);
@@ -192,7 +84,7 @@ function AboutUs() {
     if (activeCard !== null) {
       timeoutId = setTimeout(() => {
         setActiveCard(null);
-      }, 5000);
+      }, 8000);
     }
 
     return () => clearTimeout(timeoutId);
@@ -220,20 +112,17 @@ function AboutUs() {
                       alt="profile"
                     />
                   </div>
-                  <h2 className="position">{item.profile.position}</h2>
-                  <h3 className="name">{item.profile.name}</h3>
+                  <h1 className="name">{item.profile.name}</h1>
+                  <h5 className="position">{item.profile.position}</h5>
                   <div className="social-icons" onClick={handleLinkClick}>
-                    <a href={item.social.linkedin} target="_blank">
-                      <img src="./images/link.png" alt="linkedIn" />
+                    <a href={item.social.linkedin} target="_" className="linkedin">
+                      <BsLinkedin />
                     </a>
-                    <a href={item.social.twitter} target="_blank">
-                      <img src="./images/twi.png" alt="Twitter" />
+                    <a href={item.social.twitter} target="_" className="twitter">
+                      <BsTwitter />
                     </a>
-                    <a href={item.social.facebook} target="_blank">
-                      <img src="./images/fb.png" alt="Facebook" />
-                    </a>
-                    <a href={item.social.instagram} target="_blank">
-                      <img src="./images/insta.png" alt="Instagram" />
+                    <a href={item.social.facebook} target="_" className="facebook">
+                      <BsFacebook />
                     </a>
                   </div>
                 </div>

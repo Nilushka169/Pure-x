@@ -38,7 +38,7 @@
   width: 100%;
   height: 97%;
   padding: 50px;
-  box-shadow: 0 30px 50px #dbdbdb;
+  box-shadow: 0px 25px 30px #a7a7a7;
 }
 
 #slide {
@@ -131,8 +131,6 @@
   animation: showcontent 0.2s ease-in-out 0s forwards;
 }
 
-
-
 @keyframes showcontent {
   from {
     opacity: 0;
@@ -186,7 +184,6 @@
   top: 50%;
   transform: translate(0, -25%);
   overflow: hidden;
-
 }
 .DesCard h1 {
   text-align: center;
@@ -204,11 +201,10 @@
   display: block;
 }
 
-
 /* Scrollbar styles */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #969696 #DFE9EB;
+  scrollbar-color: #969696 #dfe9eb;
 }
 
 *::-webkit-scrollbar {
@@ -216,15 +212,15 @@
 }
 *::-webkit-scrollbar-track {
   border-radius: 10px;
-  background-color: #DFE9EB;
+  background-color: #dfe9eb;
 }
 
 *::-webkit-scrollbar-track:hover {
-  background-color: #B8C0C2;
+  background-color: #b8c0c2;
 }
 
 *::-webkit-scrollbar-track:active {
-  background-color: #B8C0C2;
+  background-color: #b8c0c2;
 }
 
 *::-webkit-scrollbar-thumb {
