@@ -99,6 +99,8 @@ function AboutUs() {
             onClick={() => handleFlip(index)}
           >
             <div className={`card ${activeCard === index ? "cardFlip" : ""}`}>
+              <span className="ribbon">
+              </span>
               <div className="card-inner">
                 {/* front */}
                 <div className="front">
