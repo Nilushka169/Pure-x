@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./AboutUs.css";
 import img1 from "../../image/person1.webp";
-import PageName from "../PageName";
 import { BsFacebook } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
@@ -92,7 +91,6 @@ function AboutUs() {
 
   return (
     <div className="full-page">
-      <PageName nameProp="About Us" />
       <div className="aboutUs-main-container">
         {items.map((item, index) => (
           <div
