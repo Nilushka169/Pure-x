@@ -6,15 +6,16 @@
 }
 
 .card-container {
-  margin: 20px;
+  margin-inline: 20px;
+  margin-top: 20px;
 }
 .card-container.active{
   pointer-events: none;
 }
 
 .card {
-  width: 550px;
-  height: 420px;
+  width: 460px;
+  height: 330px;
   transform-style: preserve-3d;
   transition: transform 0.8s ease;
   cursor: pointer;
@@ -30,6 +31,34 @@
   transform-style: preserve-3d;
   transition: transform 0.8s ease;
   position: absolute;
+}
+.card .ribbon{
+  position: absolute;
+  left: 1rem;
+  top: -1rem;
+  width: 3rem;
+  height: 5rem;
+  background: linear-gradient(rgb(14, 14, 201),rgb(47, 169, 239));
+  color: #fff;
+  text-align: center;
+  line-height: 3rem;
+  z-index: 2;
+}
+.card .ribbon::before{
+  position: absolute;
+  content: "";
+  right: -1.01rem;
+  border: .52rem solid rgb(23, 1, 146);
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+.card .ribbon::after{
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  border: 1.5rem solid transparent;
+  border-bottom-color: white;
 }
 
 .card .card-inner .front,
@@ -48,6 +77,20 @@
 .card .card-inner .back h1{
     text-transform: uppercase;
 }
+.card .card-inner .front h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.4em;
+    margin-block-end: 1.4em;
+    font-weight: bold;
+}
+.card .card-inner .front h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.5em;
+    margin-block-end: 0em;
+    font-weight: bold;
+}
 .card .card-inner .front h1{
   color: #1b588a;
 }
@@ -57,10 +100,6 @@
 .card .card-inner .front:hover  h1 {
   color: #369aec;
     transition: 0.3s;
-}
-.card .card-inner .front:hover .profilePic-container .profilePic {
-  transform: scale(1.1);
-  transition: transform 0.7s ease-in;
 }
 
 .card .card-inner .back {
@@ -72,20 +111,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 55%;
 }
-.card .card-inner .front .profilePic-container .profileBackground{
-  background-color: #ebeaea;
-  width: 100%;
-  height: 30%;
-  position: absolute;
-  border-radius: 100% 0% 50% 50% / 0% 0% 100% 100% ;
-  top: 0;
-}
-
 .card .card-inner .front .profilePic-container .profilePic {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+  margin-top: 10px;
   border-radius: 50%;
   z-index: 1;
 }

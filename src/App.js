@@ -1,5 +1,4 @@
 import './App.css';
-import PageName from './components/PageName';
 import AboutUs from './components/AboutUs/AboutUs';
 import BackToTop from './components/BackToTop';
 import Home from "./components/Home/Home";
@@ -12,7 +11,6 @@ function App() {
       <Home/>
       <OurProjects/>
       <AboutUs/>
-      <PageName/>
     </div>
   );
 }
