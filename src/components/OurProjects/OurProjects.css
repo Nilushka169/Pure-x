@@ -1,26 +1,6 @@
 /* OurProjects.css */
 
-.side-container {
-  flex: 0 0 3%;
-  background: rgba(0, 0, 0, 0.1);
-}
-.pagename {
-  position: relative;
-  top: 50%;
-  color: rgba(0, 0, 0, 0.2);
-  transform: translate(0, -50%);
-  writing-mode: vertical-lr;
-  text-transform: uppercase;
-  font-size: 4rem;
-  font-weight: bolder;
-  letter-spacing: 5px;
-  font-family: "Montserrat", sans-serif;
-  line-height: 1;
-  padding: 0;
-  margin: 0;
-}
 .Main-container {
-  flex: 0 0 97%;
   height: 100vh;
   margin: auto;
   overflow: hidden;
@@ -28,11 +8,11 @@
 }
 .container {
   position: absolute;
-  left: 0%;
+  left: 1%;
   top: 50%;
   transform: translate(0%, -50%);
-  width: 100%;
-  height: 97%;
+  width: 95%;
+  height: 95%;
   padding: 50px;
   box-shadow: 0px 25px 30px #a7a7a7;
 }
