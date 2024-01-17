@@ -1,15 +1,8 @@
-.full-page {
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
-}
 
 .aboutUs-main-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  overflow-y: auto;
-  height: 100%;
 }
 
 .card-container {

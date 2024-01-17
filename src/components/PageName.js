@@ -7,7 +7,6 @@ const PageName = ({ nameProp }) => {
         className="side-container"
         style={{
           /* position: "fixed", */
-          flex: " 0 0 3%",
           background: "rgba(0, 0, 0, 0.1)",
         }}
       >
@@ -18,7 +17,6 @@ const PageName = ({ nameProp }) => {
             top: "50%",
             color: "rgba(0, 0, 0, 0.2)",
             transform: "translate(0, -50%)",
-            writingMode: " vertical-lr",
             textTransform: "uppercase",
             fontSize: "4rem",
             fontWeight: "bolder",

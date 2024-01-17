@@ -105,11 +105,6 @@ class App extends React.Component {
     return (
       <>
         <div className="full-page">
-          <div className="side-container">
-            <div className="pagename">
-              <div> Our Projects</div>
-            </div>
-          </div>
           <div className="Main-container">
             <div className="container">
               <div id="slide">
