@@ -7,6 +7,7 @@ import { IoMailOpen } from "react-icons/io5";
 import { TiThMenuOutline } from "react-icons/ti";
 import { FaWindowClose } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Flower_Gallery from "./Flower_Gallery/Flower_Gallery";
 
 function Home() {
   const [ismobileLinksOpen, setIsmobileLinksOpen] = useState(false);
@@ -122,16 +123,12 @@ function Home() {
           <h1>left</h1>
         </div>
         <div className="Right-side">
-          <h1>right</h1>
+          <Flower_Gallery/>
         </div>
       </div>
       <div className="bottom">
         <div className="bottom-center slider">
-          <div className="slide">
-          <div><div>JAVA   C   Python   C#   SQL   C++   PHP</div></div>
-          <div><div>JavaScript   JQuery   Angular.Js   React.Js   Express.Js   Node.js</div></div>
-          <div><div>ReactNative   Kotlin   Dart   Flutter</div></div>
-          </div>
+          
         </div>
       </div>
     </div>

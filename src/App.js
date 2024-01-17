@@ -8,11 +8,11 @@ import OurProjects from './components/OurProjects/OurProjects';
 function App() {
   return (
     <div>
-      <BackToTop/>
+      {/* <BackToTop/> */}
       <Home/>
-      <OurProjects/>
+      {/* <OurProjects/>
       <AboutUs/>
-      <PageName/>
+      <PageName/> */}
     </div>
   );
 }
