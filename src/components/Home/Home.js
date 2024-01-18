@@ -27,95 +27,100 @@ function Home() {
           <div className="Logo">
             <a href="/">
               <img src="./images/logo.png" alt="Logo" />
+              PURE-X
             </a>
           </div>
-          <ul className="main-uls">
-            <a href="/">
-              <li className="nav-container">
-                <AiFillHome />
-                Home
-              </li>
-            </a>
-            <a href="/">
-              <li className="nav-container">
-                <RiProjectorFill />
-                Our Projects
-              </li>
-            </a>
-            <a href="/">
-              <li className="nav-container">
-                <FaExclamationCircle />
-                About us
-              </li>
-            </a>
-            <a href="/">
-              <li className="nav-container">
-                <IoMailOpen />
-                Contact us
-              </li>
-            </a>
-            <div className="social-icon">
+          <div className="linkWithIcon">
+            <ul className="main-uls">
               <a href="/">
-                <img src="./images/link.png" alt="linkedIn" />
+                <li className="nav-container">
+                  <AiFillHome />
+                  Home
+                </li>
               </a>
               <a href="/">
-                <img src="./images/twi.png" alt="Twitter" />
+                <li className="nav-container">
+                  <RiProjectorFill />
+                  Our Projects
+                </li>
               </a>
               <a href="/">
-                <img src="./images/fb.png" alt="Facebook" />
+                <li className="nav-container">
+                  <FaExclamationCircle />
+                  About us
+                </li>
               </a>
               <a href="/">
-                <img src="./images/insta.png" alt="Instagram" />
+                <li className="nav-container">
+                  <IoMailOpen />
+                  Contact us
+                </li>
               </a>
-            </div>
-            <div className="dropdownmenu" onClick={dropdownmenuclick}>
-              {ismobileLinksOpen ? <FaWindowClose /> : <TiThMenuOutline />}
-            </div>
-            <div
-              className={ismobileLinksOpen ? "mobileLinks open" : "mobileLinks"}
-            >
-              <ul>
-                <a href="Home">
-                  <li>
-                    <AiFillHome />
-                    Home
-                  </li>
+              <div className="social-icon">
+                <a href="/">
+                  <img src="./images/link.png" alt="linkedIn" />
                 </a>
-                <a href="#OurProjects">
-                  <li>
-                    <RiProjectorFill />
-                    Our Projects
-                  </li>
+                <a href="/">
+                  <img src="./images/twi.png" alt="Twitter" />
                 </a>
-                <a href="#AboutUs">
-                  <li>
-                    <FaExclamationCircle />
-                    About us
-                  </li>
+                <a href="/">
+                  <img src="./images/fb.png" alt="Facebook" />
                 </a>
-                <a href="ContactUs">
-                  <li>
-                    <IoMailOpen />
-                    Contact us
-                  </li>
+                <a href="/">
+                  <img src="./images/insta.png" alt="Instagram" />
                 </a>
-                <div className="social-icon-mobile">
-                  <a href="/">
-                    <img src="./images/link.png" alt="linkedIn" />
+              </div>
+              <div className="dropdownmenu" onClick={dropdownmenuclick}>
+                {ismobileLinksOpen ? <FaWindowClose /> : <TiThMenuOutline />}
+              </div>
+              <div
+                className={
+                  ismobileLinksOpen ? "mobileLinks open" : "mobileLinks"
+                }
+              >
+                <ul>
+                  <a href="Home">
+                    <li>
+                      <AiFillHome />
+                      Home
+                    </li>
                   </a>
-                  <a href="/">
-                    <img src="./images/twi.png" alt="Twitter" />
+                  <a href="#OurProjects">
+                    <li>
+                      <RiProjectorFill />
+                      Our Projects
+                    </li>
                   </a>
-                  <a href="/">
-                    <img src="./images/fb.png" alt="Facebook" />
+                  <a href="#AboutUs">
+                    <li>
+                      <FaExclamationCircle />
+                      About us
+                    </li>
                   </a>
-                  <a href="/">
-                    <img src="./images/insta.png" alt="Instagram" />
+                  <a href="ContactUs">
+                    <li>
+                      <IoMailOpen />
+                      Contact us
+                    </li>
                   </a>
-                </div>
-              </ul>
-            </div>
-          </ul>
+                  <div className="social-icon-mobile">
+                    <a href="/">
+                      <img src="./images/link.png" alt="linkedIn" />
+                    </a>
+                    <a href="/">
+                      <img src="./images/twi.png" alt="Twitter" />
+                    </a>
+                    <a href="/">
+                      <img src="./images/fb.png" alt="Facebook" />
+                    </a>
+                    <a href="/">
+                      <img src="./images/insta.png" alt="Instagram" />
+                    </a>
+                  </div>
+                </ul>
+              </div>
+            </ul>
+          </div>
         </motion.nav>
       </header>
       <div className="Middle-section">
@@ -123,13 +128,11 @@ function Home() {
           <h1>left</h1>
         </div>
         <div className="Right-side">
-          <Flower_Gallery/>
+          <Flower_Gallery />
         </div>
       </div>
       <div className="bottom">
-        <div className="bottom-center slider">
-          
-        </div>
+        <div className="bottom-center slider"></div>
       </div>
     </div>
   );
