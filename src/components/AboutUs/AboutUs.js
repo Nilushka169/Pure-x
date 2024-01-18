@@ -63,7 +63,48 @@ function AboutUs() {
         instagram: "",
       },
     },
-    
+    {
+      id: 1,
+      profile: {
+        picture: img1,
+        position: "position 4",
+        name: "person 4",
+      },
+      social: {
+        linkedin: "",
+        twitter: "",
+        facebook: "",
+        instagram: "",
+      },
+    },
+    {
+      id: 1,
+      profile: {
+        picture: img1,
+        position: "position 4",
+        name: "person 4",
+      },
+      social: {
+        linkedin: "",
+        twitter: "",
+        facebook: "",
+        instagram: "",
+      },
+    },
+    {
+      id: 1,
+      profile: {
+        picture: img1,
+        position: "position 4",
+        name: "person 4",
+      },
+      social: {
+        linkedin: "",
+        twitter: "",
+        facebook: "",
+        instagram: "",
+      },
+    },
   ]);
 
   const [activeCard, setActiveCard] = useState(null);

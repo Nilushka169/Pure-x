@@ -1,5 +1,6 @@
 
 .aboutUs-main-container {
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -71,7 +72,7 @@
   justify-content: space-between;
   align-items: center;
   backface-visibility: hidden;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .card .card-inner .front h1,h5,
 .card .card-inner .back h1{
@@ -100,6 +101,10 @@
 .card .card-inner .front:hover  h1 {
   color: #369aec;
     transition: 0.3s;
+}
+.card .card-inner .front:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: 0.4s ease-in-out;
 }
 
 .card .card-inner .back {
