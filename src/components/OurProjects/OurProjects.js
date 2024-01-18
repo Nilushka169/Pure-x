@@ -105,7 +105,7 @@ class App extends React.Component {
     return (
       <>
         <div className="full-page">
-          <div className="Main-container">
+          <div className="Main-container" id="ourprojects">
             <div className="container">
               <div id="slide">
                 {this.state.items.map((item) => (
@@ -117,8 +117,15 @@ class App extends React.Component {
                     <div className="content">
                       <div className="name">{item.content.name}</div>
                       <div className="des">{item.content.description}</div>
-                      <div className="dropdowndes" onClick={this.dropdowndesclick}>
-                        {isDesCardOpen ? (<FaAngleDoubleLeft />) : (<FaAngleDoubleRight />)}
+                      <div
+                        className="dropdowndes"
+                        onClick={this.dropdowndesclick}
+                      >
+                        {isDesCardOpen ? (
+                          <FaAngleDoubleLeft />
+                        ) : (
+                          <FaAngleDoubleRight />
+                        )}
                       </div>
                       <div
                         className={isDesCardOpen ? "DesCard open" : "DesCard"}

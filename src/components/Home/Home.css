@@ -67,6 +67,10 @@ nav {
   background-color: aqua;
   margin: auto;
 }
+.Right-side{
+  width: 30rem;
+  margin: auto;
+}
 
 .main-uls {
   position: relative;

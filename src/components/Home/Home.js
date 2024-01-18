@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Home.css";
+import { Link } from "react-scroll";
 import { AiFillHome } from "react-icons/ai";
 import { FaExclamationCircle } from "react-icons/fa";
 import { RiProjectorFill } from "react-icons/ri";
@@ -22,7 +23,7 @@ function Home() {
         <motion.nav
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 10 }}
-          transition={{ delay: 0.2, duration: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
         >
           <div className="Logo">
             <a href="/">
@@ -32,30 +33,30 @@ function Home() {
           </div>
           <div className="linkWithIcon">
             <ul className="main-uls">
-              <a href="/">
+              <Link to="/" spy={true} offset={50} duration={500}>
                 <li className="nav-container">
                   <AiFillHome />
                   Home
                 </li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="ourprojects" spy={true} offset={50} duration={500}>
                 <li className="nav-container">
                   <RiProjectorFill />
                   Our Projects
                 </li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="aboutus" spy={true} offset={50} duration={500}>
                 <li className="nav-container">
                   <FaExclamationCircle />
                   About us
                 </li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="contactus" spy={true} offset={50} duration={500}>
                 <li className="nav-container">
                   <IoMailOpen />
                   Contact us
                 </li>
-              </a>
+              </Link>
               <div className="social-icon">
                 <a href="/">
                   <img src="./images/link.png" alt="linkedIn" />
