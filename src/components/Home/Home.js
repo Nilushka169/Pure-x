@@ -23,7 +23,7 @@ function Home() {
         <motion.nav
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 10 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ delay: 0, duration: 0.2 }}
         >
           <div className="Logo">
             <a href="/">
@@ -33,25 +33,43 @@ function Home() {
           </div>
           <div className="linkWithIcon">
             <ul className="main-uls">
-              <Link to="/" spy={true} offset={50} duration={500}>
+              <Link to="/" spy={true} offset={50} smooth={true} duration={750}>
                 <li className="nav-container">
                   <AiFillHome />
                   Home
                 </li>
               </Link>
-              <Link to="ourprojects" spy={true} offset={50} duration={500}>
+              <Link
+                to="ourprojects"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={750}
+              >
                 <li className="nav-container">
                   <RiProjectorFill />
                   Our Projects
                 </li>
               </Link>
-              <Link to="aboutus" spy={true} offset={50} duration={500}>
+              <Link
+                to="aboutus"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={750}
+              >
                 <li className="nav-container">
                   <FaExclamationCircle />
                   About us
                 </li>
               </Link>
-              <Link to="contactus" spy={true} offset={50} duration={500}>
+              <Link
+                to="contactus"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={750}
+              >
                 <li className="nav-container">
                   <IoMailOpen />
                   Contact us
@@ -140,7 +158,3 @@ function Home() {
 }
 
 export default Home;
-
-
-
-
