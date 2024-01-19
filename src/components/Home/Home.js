@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Home.css";
 import { Link } from "react-scroll";
 import { AiFillHome } from "react-icons/ai";
@@ -8,7 +8,7 @@ import { IoMailOpen } from "react-icons/io5";
 import { TiThMenuOutline } from "react-icons/ti";
 import { FaWindowClose } from "react-icons/fa";
 import { motion } from "framer-motion";
-import Flower_Gallery from "./Flower_Gallery/Flower_Gallery";
+import FlowerGallery from "./Flower_Gallery/FlowerGallery";
 
 function Home() {
   const [ismobileLinksOpen, setIsmobileLinksOpen] = useState(false);
@@ -16,13 +16,28 @@ function Home() {
   const dropdownmenuclick = () => {
     setIsmobileLinksOpen(!ismobileLinksOpen);
   };
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="main-container">
+    <div className="main-container" id="home">
       <header className="nav-margin">
         <motion.nav
+          className={`nav ${scrollPosition >= 50 ? "scrolled" : ""}`}
           initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0, duration: 0.2 }}
         >
           <div className="Logo">
@@ -33,8 +48,18 @@ function Home() {
           </div>
           <div className="linkWithIcon">
             <ul className="main-uls">
-              <Link to="/" spy={true} offset={50} smooth={true} duration={750}>
-                <li className="nav-container">
+              <Link
+                to="home"
+                spy={true}
+                offset={0}
+                smooth={true}
+                duration={750}
+              >
+                <li
+                  className={`nav-container ${
+                    scrollPosition >= 50 ? "scrolled" : ""
+                  }`}
+                >
                   <AiFillHome />
                   Home
                 </li>
@@ -43,10 +68,14 @@ function Home() {
                 to="ourprojects"
                 spy={true}
                 smooth={true}
-                offset={0}
+                offset={-30}
                 duration={750}
               >
-                <li className="nav-container">
+                <li
+                  className={`nav-container ${
+                    scrollPosition >= 50 ? "scrolled" : ""
+                  }`}
+                >
                   <RiProjectorFill />
                   Our Projects
                 </li>
@@ -58,7 +87,11 @@ function Home() {
                 offset={0}
                 duration={750}
               >
-                <li className="nav-container">
+                <li
+                  className={`nav-container ${
+                    scrollPosition >= 50 ? "scrolled" : ""
+                  }`}
+                >
                   <FaExclamationCircle />
                   About us
                 </li>
@@ -70,7 +103,11 @@ function Home() {
                 offset={0}
                 duration={750}
               >
-                <li className="nav-container">
+                <li
+                  className={`nav-container ${
+                    scrollPosition >= 50 ? "scrolled" : ""
+                  }`}
+                >
                   <IoMailOpen />
                   Contact us
                 </li>
@@ -144,14 +181,13 @@ function Home() {
       </header>
       <div className="Middle-section">
         <div className="Left-side">
-          <h1>left</h1>
+          <div>
+            <img src="./images/logo3d.png" alt="logo"/>
+          </div>
         </div>
         <div className="Right-side">
-          <Flower_Gallery />
+          <FlowerGallery/>
         </div>
-      </div>
-      <div className="bottom">
-        <div className="bottom-center slider"></div>
       </div>
     </div>
   );

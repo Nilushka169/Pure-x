@@ -17,7 +17,7 @@ import slide_image_5 from './images/img_5.jpg';
 import slide_image_6 from './images/img_6.jpg';
 import slide_image_7 from './images/img_7.jpg';
 
-function Flower_Gallery() {
+function FlowerGallery() {
   return (
     <div className="flower_container">
       <Swiper
@@ -79,4 +79,4 @@ function Flower_Gallery() {
   );
 }
 
-export default Flower_Gallery;
+export default FlowerGallery;
