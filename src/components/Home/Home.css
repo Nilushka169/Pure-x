@@ -81,7 +81,8 @@ ul a {
   transition: transform 0.5s ease;
 }
 .nav-container.scrolled {
-  color: #083663;
+    color: #083663;
+
 }
 .nav-container:hover {
   color: #ffffff;
@@ -90,9 +91,10 @@ ul a {
   border-radius: 25px;
   transform: translate(0%, 10%);
 }
-.nav-container:hover.scrolled {
+.nav-container.scrolled:hover {
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(25px);
+  color: #083663;
 }
 .social-icon {
   position: relative;

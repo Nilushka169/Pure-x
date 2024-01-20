@@ -8,7 +8,7 @@ import { IoMailOpen } from "react-icons/io5";
 import { TiThMenuOutline } from "react-icons/ti";
 import { FaWindowClose } from "react-icons/fa";
 import { motion } from "framer-motion";
-import FlowerGallery from "./Flower_Gallery/FlowerGallery";
+/* import FlowerGallery from "./Flower_Gallery/FlowerGallery"; */
 
 function Home() {
   const [ismobileLinksOpen, setIsmobileLinksOpen] = useState(false);
@@ -186,7 +186,7 @@ function Home() {
           </div>
         </div>
         <div className="Right-side">
-          <FlowerGallery/>
+          {/* <FlowerGallery/> */}
         </div>
       </div>
     </div>
