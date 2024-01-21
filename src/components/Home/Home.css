@@ -292,19 +292,20 @@ ul a {
 .Middle-section .Left-side,
 .Middle-section .Right-side{
   flex: 1;
-  max-width: 50%;
+  max-width: 55%;
   box-sizing: border-box;
 }
 .Left-side{
   position: absolute;
-  left: 5%;
+  left: 0%;
   top: 19%;
 }
 .Left-side img{
-  width: 75%;
+  width: 65%;
 }
 .Right-side{
-  
-  right: 5%;
-  top: 5%;
+  position: absolute;
+  left: 40%;
+  top: 10%;
+  width: 100%;
 }

@@ -9,6 +9,7 @@ import { TiThMenuOutline } from "react-icons/ti";
 import { FaWindowClose } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Change_Text from "./Change_Text/Change_text";
+import LanguageLine from "./bottomLine/LanguageLine";
 /* import FlowerGallery from "./Flower_Gallery/FlowerGallery"; */
 
 function Home() {
@@ -188,19 +189,11 @@ function Home() {
         </div>
         <div className="Right-side">
           {/* <FlowerGallery/> */}
-
-          {/* Text changing part */}
-
-          <div className="changeText">
             <Change_Text/>
-          </div>
-
-
-
         </div>
       </div>
       <div className="Bottom-section">
-        <LanguageLine/>
+        <LanguageLine />
       </div>
     </div>
   );

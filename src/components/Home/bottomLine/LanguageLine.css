@@ -15,17 +15,18 @@ section .scroll{
     display: flex;
 }
 section .scroll div{
-    color: #b9b9b9;
+    color: rgba(255, 255, 255, 0.4);
     font-size: 2rem;
     background: transparent;
     white-space:nowrap;
     font-weight: 900;
     text-transform: uppercase;
-    animation: animate 200s linear infinite;
+    animation: animate 300s linear infinite;
     opacity: 0.2;
 }
 section .scroll div span{
-    -webkit-text-stroke: 1px #b9b9b9;
+    -webkit-text-stroke: 0.1px rgba(255, 255, 255, 0.4);
+    letter-spacing: 3px;
     color: transparent;
     padding-inline: 40px;
 }
