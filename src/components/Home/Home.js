@@ -8,6 +8,7 @@ import { IoMailOpen } from "react-icons/io5";
 import { TiThMenuOutline } from "react-icons/ti";
 import { FaWindowClose } from "react-icons/fa";
 import { motion } from "framer-motion";
+import LanguageLine from "./bottomLine/LanguageLine";
 /* import FlowerGallery from "./Flower_Gallery/FlowerGallery"; */
 
 function Home() {
@@ -188,6 +189,9 @@ function Home() {
         <div className="Right-side">
           {/* <FlowerGallery/> */}
         </div>
+      </div>
+      <div className="Bottom-section">
+        <LanguageLine/>
       </div>
     </div>
   );
