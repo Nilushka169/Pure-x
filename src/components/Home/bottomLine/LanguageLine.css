@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+section .scroll{
+    width: 100%;
+    display: flex;
+}
+section .scroll div{
+    color: #b9b9b9;
+    font-size: 2rem;
+    background: transparent;
+    white-space:nowrap;
+    font-weight: 900;
+    text-transform: uppercase;
+    animation: animate 200s linear infinite;
+    opacity: 0.2;
+}
+section .scroll div span{
+    -webkit-text-stroke: 1px #b9b9b9;
+    color: transparent;
+    padding-inline: 40px;
+}
+@keyframes animate {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}

@@ -199,6 +199,9 @@ function Home() {
 
         </div>
       </div>
+      <div className="Bottom-section">
+        <LanguageLine/>
+      </div>
     </div>
   );
 }
