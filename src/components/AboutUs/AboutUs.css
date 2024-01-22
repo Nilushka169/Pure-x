@@ -4,13 +4,11 @@
     box-sizing: border-box;
 }
 
-.section1, .section3, .section4{
+.section1, .section3, .section4, .section5{
     min-height: 100vh;
 }
 
-.section5{
-    min-height: 250vh;
-}
+
 .AboutUsTitleContainer{
     height: 85vh;
     background-color: blueviolet;
