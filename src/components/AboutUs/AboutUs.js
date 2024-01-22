@@ -1,184 +1,155 @@
-import React, { useState, useEffect } from "react";
+import React from 'react';
 import "./AboutUs.css";
-import img1 from "../../image/person1.webp";
-import { BsFacebook } from "react-icons/bs";
-import { BsTwitter } from "react-icons/bs";
-import { BsLinkedin } from "react-icons/bs";
+import DataAnalytics from "./Icon/data-analytics.svg"
+import Nearshore from "./Icon/nearshore.svg"
+import ProductDesign from"./Icon/product-design.svg"
+import ProductFundamentals from"./Icon/product-fundamentals.svg"
+import SoftwareDevelopment from "./Icon/software-development.svg"
+import TechnologyConsulting from"./Icon/technology-consulting.svg"
+import react_logo from "./Icon/Technologies/react.svg"
+import golang_logo from "./Icon/Technologies/golang.svg"
+import java_logo from "./Icon/Technologies/java.svg"
+import laravel_logo from "./Icon/Technologies/laravel.svg"
+import next_logo from "./Icon/Technologies/next.svg"
+import nodejs_logo from "./Icon/Technologies/nodejs.svg"
+import symfony_logo from "./Icon/Technologies/symfony.svg"
+import typescript_logo from "./Icon/Technologies/typescript.svg"
+import aws_logo from "./Icon/Technologies/aws.svg"
+import vuejs_logo from "./Icon/Technologies/vuejs.svg"
+import AboutUsCard from './About_Cards/AboutUsCard';
 
 function AboutUs() {
-  const [items] = useState([
-    {
-      id: 1,
-      profile: {
-        picture: img1,
-        position: "position 1",
-        name: "person 1",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
-      },
-    },
-    {
-      id: 1,
-      profile: {
-        picture: img1,
-        position: "position 2",
-        name: "person 2",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
-      },
-    },
-    {
-      id: 1,
-      profile: {
-        picture: img1,
-        position: "position 3",
-        name: "person 3",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
-      },
-    },
-    {
-      id: 1,
-      profile: {
-        picture: img1,
-        position: "position 4",
-        name: "person 4",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
-      },
-    },
-    {
-      id: 1,
-      profile: {
-        picture: img1,
-        position: "position 4",
-        name: "person 4",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
-      },
-    },
-    {
-      id: 1,
-      profile: {
-        picture: img1,
-        position: "position 4",
-        name: "person 4",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
-      },
-    },
-    {
-      id: 1,
-      profile: {
-        picture: img1,
-        position: "position 4",
-        name: "person 4",
-      },
-      social: {
-        linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
-      },
-    },
-  ]);
-
-  const [activeCard, setActiveCard] = useState(null);
-
-  const handleFlip = (index) => {
-    setActiveCard(index === activeCard ? null : index);
-  };
-
-  const handleLinkClick = (event) => {
-    event.stopPropagation();
-  };
-
-
-  useEffect(() => {
-    let timeoutId;
-
-    if (activeCard !== null) {
-      timeoutId = setTimeout(() => {
-        setActiveCard(null);
-      }, 8000);
-    }
-
-    return () => clearTimeout(timeoutId);
-  }, [activeCard]);
-
   return (
-    <div className="full-page" id="aboutus">
-      <div className="aboutUs-main-container">
-        {items.map((item, index) => (
-          <div
-            key={item.id}
-            className="card-container"
-            onClick={() => handleFlip(index)}
-          >
-            <div className={`card ${activeCard === index ? "cardFlip" : ""}`}>
-              <span className="ribbon">
-              </span>
-              <div className="card-inner">
-                {/* front */}
-                <div className="front">
-                  <div className="profilePic-container">
-                    <span className="profileBackground"></span>
-                    <img
-                      src={item.profile.picture}
-                      className="profilePic"
-                      alt="profile"
-                    />
-                  </div>
-                  <h1 className="name">{item.profile.name}</h1>
-                  <h5 className="position">{item.profile.position}</h5>
-                  <div className="social-icons" onClick={handleLinkClick}>
-                    <a href={item.social.linkedin} target="_" className="linkedin">
-                      <BsLinkedin />
-                    </a>
-                    <a href={item.social.twitter} target="_" className="twitter">
-                      <BsTwitter />
-                    </a>
-                    <a href={item.social.facebook} target="_" className="facebook">
-                      <BsFacebook />
-                    </a>
-                  </div>
-                </div>
+    <div className='AboutUS-main-container'>
+      <section className='section1'>
+        <div className='AboutUsTitleContainer'>
+          <div className='AboutUsTitle'>
+            <h3>About Pure-X</h3>
+            <h1>Bringing the </h1><br/>
+            <h1>World Closer</h1><br/>
+            <h1>with Nearshore</h1>
+            <br/>
+            <h3>We hatch ideas into software solutions <br/>that achieve your desired outcomes <br/>faster.</h3>
+          </div>
 
-                {/* back */}
-                <div className="back">
-                  <h1>Description</h1>
+        </div>
+      </section>
+      <section className='section2'>
+        <h1 className='sectionTitle'>Our Services</h1>
+          <div className='OurServicesContainer'>
+            <div className='ServiceCardContainer'>
+              <div className='ServiceCard'>
+                <img src={ProductDesign} alt="Typescript_logo"/>
+                <h1>Product Design</h1>
+                <h2>Human-centered design for engaging customer experiences​</h2>
+              </div>
+            </div>
+            <div className='ServiceCardContainer'>
+                <div className='ServiceCard'>
+                  <img src={ProductFundamentals} alt="Typescript_logo"/>
+                  <h1>Product Fundamentals</h1>
+                  <h2>Defining and validating your product’s success</h2>
+                </div>
+            </div>
+              <div className='ServiceCardContainer'>
+                <div className='ServiceCard'>
+                  <img src={Nearshore} alt="Typescript_logo"/>
+                  <h1>Nearshore Software Development​</h1>
+                  <h2>Accelerate development with Agile Nearshore teams</h2>
+                </div>
+            </div>
+              <div className='ServiceCardContainer'>
+                <div className='ServiceCard'>
+                  <img src={DataAnalytics} alt="Typescript_logo"/>
+                  <h1>Data Analytics</h1>
+                  <h2>Unlock business insights with user-centric data analytics</h2>
+                </div>
+              </div>
+              <div className='ServiceCardContainer'>
+                <div className='ServiceCard'>
+                  <img src={SoftwareDevelopment} alt="Typescript_logo"/>
+                  <h1>Software Development</h1>
+                  <h2>Agile, full-stack software development for modern solutions</h2>
+                </div>
+              </div>
+              <div className='ServiceCardContainer'>
+                <div className='ServiceCard'>
+                  <img src={TechnologyConsulting} alt="Typescript_logo"/>
+                  <h1>Technology Consulting</h1>
+                  <h2>Modernize your business with expert technology consulting</h2>
                 </div>
               </div>
             </div>
+      </section>
+      <section className='section3'>
+        <h1 className='sectionTitle'>Tools and Technologies</h1>
+        <div className='ToolsAndTechnologiesContainer'>
+          <div className='ToolsCardContainer'>
+            <div className='ToolsCard'>
+              <div className='T_cards'>
+                <img src={typescript_logo} alt="Typescript_logo"/>
+              </div>
+            </div>
+            <div className='ToolsCard'>
+              <div className='T_cards'>
+                <img src={react_logo} alt="Typescript_logo"/>
+              </div>
+            </div>
+            <div className='ToolsCard'>
+              <div className='T_cards'>
+                <img src={golang_logo}alt="Typescript_logo"/>
+              </div>
+            </div>
+            <div className='ToolsCard'>
+              <div className='T_cards'>
+                <img src={java_logo}alt="Typescript_logo"/>
+              </div>
+            </div>
+            <div className='ToolsCard'>
+              <div className='T_cards'>
+                <img src={laravel_logo}alt="Typescript_logo"/>
+              </div>
+            </div>
+            <div className='ToolsCard'>
+              <div className='T_cards'>
+                <img src={next_logo}alt="Typescript_logo"/>
+              </div>
+            </div>
+            <div className='ToolsCard'>
+              <div className='T_cards'>
+                <img src={nodejs_logo}alt="Typescript_logo"/>
+              </div>
+            </div>
+            <div className='ToolsCard'>
+              <div className='T_cards'>
+                <img src={symfony_logo}alt="Typescript_logo"/>
+              </div>
+            </div>
+            <div className='ToolsCard'>
+              <div className='T_cards'>
+                <img src={aws_logo}alt="Typescript_logo"/>
+              </div>
+            </div>
+            <div className='ToolsCard'>
+              <div className='T_cards'>
+                <img src={vuejs_logo}alt="Typescript_logo"/>
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
+        </div>
+        <div className='ToolsContentContainer'>
+          <h1>content</h1>
+        </div>
+      </section>
+      <section className='section4'>
+        <h1 className='sectionTitle'>A Treak Record Of Excellence And Happy Customers</h1>
+      </section>
+      <section className='section5'>
+        <h1 className='sectionTitle'>Meet Our Experts</h1>
+        <AboutUsCard/>
+      </section>
     </div>
-  );
+  )
 }
 
 export default AboutUs;
