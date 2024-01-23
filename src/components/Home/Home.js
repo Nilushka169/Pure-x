@@ -8,10 +8,8 @@ import { IoMailOpen } from "react-icons/io5";
 import { TiThMenuOutline } from "react-icons/ti";
 import { FaWindowClose } from "react-icons/fa";
 import { motion } from "framer-motion";
-/* import Change_Text from "./Change_Text/Change_text"; */
-/* import LanguageLine from "./bottomLine/LanguageLine"; */
+import background from "../../image/background.mp4" 
 /* import ReactPlayer from "react-player"; */
-/* import FlowerGallery from "./Flower_Gallery/FlowerGallery"; */
 
 function Home() {
   const [ismobileLinksOpen, setIsmobileLinksOpen] = useState(false);
@@ -36,14 +34,10 @@ function Home() {
 
   return (
     <div className="main-container" id="home">
-      {/* <ReactPlayer
-        url="/background.mp4"
-        playing
-        loop
-        muted
-        width="100%"
-        height="100%"
-      /> */}
+      <div>
+        <video src={background} autoPlay loop muted></video>
+      </div>
+
       <header className="nav-margin">
         <motion.nav
           className={`nav ${scrollPosition >= 50 ? "scrolled" : ""}`}
@@ -191,18 +185,9 @@ function Home() {
         </motion.nav>
       </header>
       <div className="Middle-section">
-        <div className="Left-side">
-          <div>
-            <img src="./images/logo3d.png" alt="logo"/>
-          </div>
-        </div>
-        <div className="Right-side">
-            {/* <Change_Text/> */}
-        </div>
-{/*       <div className="Bottom-section">
-
-      </div> */}
-    </div>
+        <div className="Left-side"></div>
+        <div className="Right-side"></div>
+      </div>
     </div>
   );
 }
