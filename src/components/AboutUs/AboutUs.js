@@ -22,7 +22,7 @@ import CountUp /*, { useCountUp } */ from 'react-countup';
 
 function AboutUs() {
   return (
-    <div className='AboutUS-main-container'>
+    <div className='AboutUS-main-container' id="aboutus">
       <section className='section1'>
         <div className='AboutUsTitleContainer'>
           <div className='AboutUsTitle'>
@@ -37,7 +37,7 @@ function AboutUs() {
         </div>
       </section>
       <section className='section2'>
-        <h1 className='sectionTitle'>Our Services</h1>
+        <h1 className='sectionTitle'>&#60;Our Services&#47;&#62;</h1>
           <div className='OurServicesContainer'>
             <div className='ServiceCardContainer'>
               <div className='ServiceCard'>
@@ -84,7 +84,7 @@ function AboutUs() {
             </div>
       </section>
       <section className='section3'>
-        <h1 className='sectionTitle'>Tools and Technologies</h1>
+        <h1 className='sectionTitle'>&#60;Tools and Technologies&#47;&#62;</h1>
         <div className='ToolsAndTechnologiesContainer'>
           <div className='ToolsCardContainer'>
             <div className='ToolsCard'>
@@ -144,7 +144,7 @@ function AboutUs() {
         </div>
       </section>
       <section className='section4'>
-        <h1 className='sectionTitle'>A Treak Record Of Excellence And Happy Customers</h1>
+        <h1 className='sectionTitle'>&#60;A Treak Record Of Excellence And Happy Customers&#47;&#62;</h1>
           <div className='PercentageContainer'>
             <div className='Top'>
               <div className='counterContainer'>
@@ -247,7 +247,7 @@ function AboutUs() {
           </div>
       </section>
       <section className='section5'>
-        <h1 className='sectionTitle'>Meet Our Experts</h1>
+        <h1 className='sectionTitle'>&#60;Meet Our Experts&#47;&#62;</h1>
         <AboutUsCard/>
       </section>
     </div>
