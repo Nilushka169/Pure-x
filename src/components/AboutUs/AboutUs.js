@@ -6,19 +6,10 @@ import ProductDesign from"./Icon/product-design.svg"
 import ProductFundamentals from"./Icon/product-fundamentals.svg"
 import SoftwareDevelopment from "./Icon/software-development.svg"
 import TechnologyConsulting from"./Icon/technology-consulting.svg"
-import react_logo from "./Icon/Technologies/react.svg"
-import golang_logo from "./Icon/Technologies/golang.svg"
-import java_logo from "./Icon/Technologies/java.svg"
-import laravel_logo from "./Icon/Technologies/laravel.svg"
-import next_logo from "./Icon/Technologies/next.svg"
-import nodejs_logo from "./Icon/Technologies/nodejs.svg"
-import symfony_logo from "./Icon/Technologies/symfony.svg"
-import typescript_logo from "./Icon/Technologies/typescript.svg"
-import aws_logo from "./Icon/Technologies/aws.svg"
-import vuejs_logo from "./Icon/Technologies/vuejs.svg"
 import AboutUsCard from './About_Cards/AboutUsCard';
 import journey from "./Icon/journey-img.svg"
 import CountUp /*, { useCountUp } */ from 'react-countup';
+import TabListFun from './ToolsAndTechnologies/ToolsAndTechnologies';
 
 function AboutUs() {
   return (
@@ -85,63 +76,9 @@ function AboutUs() {
       </section>
       <section className='section3'>
         <h1 className='sectionTitle'>&#60;Tools and Technologies&#47;&#62;</h1>
-        <div className='ToolsAndTechnologiesContainer'>
-          <div className='ToolsCardContainer'>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={typescript_logo} alt="Typescript_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={react_logo} alt="Typescript_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={golang_logo}alt="Typescript_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={java_logo}alt="Typescript_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={laravel_logo}alt="Typescript_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={next_logo}alt="Typescript_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={nodejs_logo}alt="Typescript_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={symfony_logo}alt="Typescript_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={aws_logo}alt="Typescript_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={vuejs_logo}alt="Typescript_logo"/>
-              </div>
-            </div>
+          <div className='TechnologiesContainer'>
+            <TabListFun/>
           </div>
-        </div>
-        <div className='ToolsContentContainer'>
-          <h1>content</h1>
-        </div>
       </section>
       <section className='section4'>
         <h1 className='sectionTitle'>&#60;A Treak Record Of Excellence And Happy Customers&#47;&#62;</h1>

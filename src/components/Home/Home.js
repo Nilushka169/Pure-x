@@ -8,9 +8,8 @@ import { IoMailOpen } from "react-icons/io5";
 import { TiThMenuOutline } from "react-icons/ti";
 import { FaWindowClose } from "react-icons/fa";
 import { motion } from "framer-motion";
-import Change_Text from "./Change_Text/Change_text";
-import LanguageLine from "./bottomLine/LanguageLine";
-/* import FlowerGallery from "./Flower_Gallery/FlowerGallery"; */
+/* import Change_Text from "./Change_Text/Change_text"; */
+
 
 function Home() {
   const [ismobileLinksOpen, setIsmobileLinksOpen] = useState(false);
@@ -188,13 +187,12 @@ function Home() {
           </div>
         </div>
         <div className="Right-side">
-          {/* <FlowerGallery/> */}
-            <Change_Text/>
+            {/* <Change_Text/> */}
         </div>
       </div>
-      <div className="Bottom-section">
-        <LanguageLine />
-      </div>
+{/*       <div className="Bottom-section">
+
+      </div> */}
     </div>
   );
 }
