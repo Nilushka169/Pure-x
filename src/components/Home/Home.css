@@ -18,9 +18,9 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-size: cover;
   position: relative;
   z-index: 999;
-  background-image: url(..//../image/backgroundHome.png);
 }
 .nav-margin {
   display: flex;

@@ -8,8 +8,8 @@ import { IoMailOpen } from "react-icons/io5";
 import { TiThMenuOutline } from "react-icons/ti";
 import { FaWindowClose } from "react-icons/fa";
 import { motion } from "framer-motion";
-import Change_Text from "./Change_Text/Change_text";
 import LanguageLine from "./bottomLine/LanguageLine";
+import ReactPlayer from "react-player";
 /* import FlowerGallery from "./Flower_Gallery/FlowerGallery"; */
 
 function Home() {
@@ -35,6 +35,14 @@ function Home() {
 
   return (
     <div className="main-container" id="home">
+      {/* <ReactPlayer
+        url="/background.mp4"
+        playing
+        loop
+        muted
+        width="100%"
+        height="100%"
+      /> */}
       <header className="nav-margin">
         <motion.nav
           className={`nav ${scrollPosition >= 50 ? "scrolled" : ""}`}
@@ -182,15 +190,8 @@ function Home() {
         </motion.nav>
       </header>
       <div className="Middle-section">
-        <div className="Left-side">
-          <div>
-            <img src="./images/logo3d.png" alt="logo"/>
-          </div>
-        </div>
-        <div className="Right-side">
-          {/* <FlowerGallery/> */}
-            <Change_Text/>
-        </div>
+        <div className="Left-side"></div>
+        <div className="Right-side"></div>
       </div>
       <div className="Bottom-section">
         <LanguageLine />
