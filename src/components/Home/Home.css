@@ -11,7 +11,7 @@ span {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto",sans-serif;
 }
 
 .main-container {
@@ -49,7 +49,7 @@ nav {
   align-items: center;
   justify-content: space-around;
   text-decoration: none;
-  color: #083663;
+  color: #0077b6;
   font-size: 41px;
   margin: 0;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
