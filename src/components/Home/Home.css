@@ -20,6 +20,12 @@ body {
   position: relative;
   z-index: 999;
 }
+.main-container video{
+  width: 100%;
+  object-fit: cover;
+  height: 100vh;
+  position: absolute;
+}
 .nav-margin {
   display: flex;
   justify-content: center;
