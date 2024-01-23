@@ -129,3 +129,99 @@ h1{
     margin: auto;
     width:60%;
 }
+
+/* A Treak Record Of Excellence And Happy Customers */
+
+
+
+.PercentageContainer{
+    width: 80vw;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.PercentageContainer >*{
+    
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+
+.Top{
+    /* background: tomato; */
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Bottom{
+    /* background: lightseagreen; */
+    height: 80px;
+}
+
+.Middle{
+    width: 436px;
+    height: 400px;
+    font-size: 24px;
+    margin: auto 0;
+    /* border: 1px solid black; */
+}
+
+.Middle img{
+    height: 400px;
+    margin: auto 0;
+}
+
+.Left{
+    /* background: gold; */
+    display: flex;
+    flex-direction: column;
+}
+
+.Right{
+    /* background: hotpink; */
+    display: flex;
+    flex-direction: column;
+}
+
+@media all and (min-width: 800px){
+    .Middle{
+        flex: 3;
+    }
+    .Left{
+        order: 1;
+    }
+    .Right{
+        order: 2;
+    }
+
+    .Bottom{
+        order: 4;
+    }
+
+    .Middle{
+        order: 2;
+    }
+}
+
+@media all and (min-width: 600px){
+    .aside{
+        flex: 1;
+    }
+  
+}
+
+.counter{
+    font-size: 3rem;
+    
+}
+
+.counterContainer{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-self: center;
+    justify-self: center;
+    /* border: 1px solid green; */
+}

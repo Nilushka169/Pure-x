@@ -17,6 +17,8 @@ import typescript_logo from "./Icon/Technologies/typescript.svg"
 import aws_logo from "./Icon/Technologies/aws.svg"
 import vuejs_logo from "./Icon/Technologies/vuejs.svg"
 import AboutUsCard from './About_Cards/AboutUsCard';
+import journey from "./Icon/journey-img.svg"
+import CountUp /*, { useCountUp } */ from 'react-countup';
 
 function AboutUs() {
   return (
@@ -143,6 +145,106 @@ function AboutUs() {
       </section>
       <section className='section4'>
         <h1 className='sectionTitle'>A Treak Record Of Excellence And Happy Customers</h1>
+          <div className='PercentageContainer'>
+            <div className='Top'>
+              <div className='counterContainer'>
+                  <CountUp className='counter'
+                      enableScrollSpy={true}
+                      scrollSpyDelay={1000}
+                      start={0}
+                      end={4}
+                      duration={3}
+                      delay={0.3}
+                      separator=" "
+                      decimals={0}
+                      decimal=","
+                      prefix=" "   //left side of counter
+                      suffix=""     //right side of counter
+                      >
+                  </CountUp>
+                  <h3>Years of Experience</h3>
+                  </div>
+            </div>
+            <div className='Middle'>
+              <div className='ImgContainer'>
+                <img src={journey} alt='journey'/>
+              </div>
+            </div>
+            <div className='aside Left'>
+              <div className='counterContainer'>
+                <CountUp className='counter'
+                        enableScrollSpy={true}
+                        scrollSpyDelay={1000}
+                        start={0}
+                        end={80}
+                        duration={3.5}
+                        delay={0.3}
+                        separator=" "
+                        decimals={0}
+                        decimal=","
+                        prefix=" "   //left side of counter
+                        suffix="+"     //right side of counter
+                        >
+                    </CountUp>
+                    <h3>Clients</h3>
+                  </div>
+                  <div className='counterContainer'>
+                <CountUp className='counter'
+                        enableScrollSpy={true}
+                        scrollSpyDelay={1000}
+                        start={0}
+                        end={170}
+                        duration={4}
+                        delay={0.3}
+                        separator=" "
+                        decimals={0}
+                        decimal=","
+                        prefix=" "   //left side of counter
+                        suffix="+"     //right side of counter
+                        >
+                    </CountUp>
+                    <h3>SUCCESSFULLY PROJECT</h3>
+                  </div>
+            </div>
+            <div className='aside Right'>
+              <div className='counterContainer'>
+               <CountUp className='counter'
+                      enableScrollSpy={true}
+                      scrollSpyDelay={1000}
+                      start={0}
+                      end={8}
+                      duration={3}
+                      delay={0.3}
+                      separator=" "
+                      decimals={0}
+                      decimal=","
+                      prefix=" "   //left side of counter
+                      suffix=""     //right side of counter
+                      >
+                  </CountUp>
+                  <h3>SKILLED DEVELOPERS</h3>
+                  </div>
+                  <div className='counterContainer'>
+               <CountUp className='counter'
+                      enableScrollSpy={true}
+                      scrollSpyDelay={1000}
+                      start={0}
+                      end={4.9}
+                      duration={3}
+                      delay={0.3}
+                      separator=" "
+                      decimals={1}
+                      decimal="."
+                      prefix=" "   //left side of counter
+                      suffix="/5"     //right side of counter
+                      >
+                  </CountUp>
+                  <h3>Rating</h3>
+                  </div>
+                  
+            </div>
+            {/* <div className='Bottom'>Bottom</div> */}
+          </div>
       </section>
       <section className='section5'>
         <h1 className='sectionTitle'>Meet Our Experts</h1>

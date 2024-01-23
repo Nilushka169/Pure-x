@@ -122,6 +122,7 @@ ul a {
   display: none;
 }
 
+
 @media (max-width: 1430px) {
   .social-icon-mobile {
     display: none;
