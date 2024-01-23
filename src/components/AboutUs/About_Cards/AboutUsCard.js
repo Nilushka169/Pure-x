@@ -131,7 +131,7 @@ function AboutUsCard() {
   }, [activeCard]);
 
   return (
-    <div className="full-page" id="aboutus">
+    <div className="full-page" >
       <div className="aboutUs-main-container">
         {items.map((item, index) => (
           <div
