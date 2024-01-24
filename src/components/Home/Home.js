@@ -8,21 +8,51 @@ import { IoMailOpen } from "react-icons/io5";
 import { TiThMenuOutline } from "react-icons/ti";
 import { FaWindowClose } from "react-icons/fa";
 import { motion } from "framer-motion";
-import background from "../../image/background.mp4" 
-/* import ReactPlayer from "react-player"; */
+import background from "../../image/background.mp4";
 
 function Home() {
   const [ismobileLinksOpen, setIsmobileLinksOpen] = useState(false);
+  const [prevScrollPosition, setPrevScrollPosition] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState("up");
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isNavbarScrolled, setIsNavbarScrolled] = useState(false);
+  const [navbarBackground, setNavbarBackground] = useState("transparent");
+  const [navbarFontColor, setNavbarFontColor] = useState("#000000"); // Default font color
+  const [navbarStyles, setNavbarStyles] = useState({
+    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)", // Example shadow
+  });
 
   const dropdownmenuclick = () => {
     setIsmobileLinksOpen(!ismobileLinksOpen);
   };
-  const [scrollPosition, setScrollPosition] = useState(0);
-
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPosition(window.scrollY);
+      const currentScrollPosition = window.scrollY;
+      setScrollDirection(
+        currentScrollPosition > prevScrollPosition ? "down" : "up"
+      );
+      setPrevScrollPosition(currentScrollPosition);
+
+      // Update scroll position
+      setScrollPosition(currentScrollPosition);
+
+      // Change the background based on scroll direction
+      if (currentScrollPosition > 80) {
+        setIsNavbarScrolled(true);
+        setNavbarBackground("#eaf4f4"); // Change to the desired background color
+        /* setNavbarFontColor("#333333"); // Change to the desired font color */
+        setNavbarStyles({
+          boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)", // Additional styles when scrolled
+        });
+      } else {
+        setIsNavbarScrolled(false);
+        setNavbarBackground("transparent");
+        setNavbarFontColor("#000000"); // Reset to default font color when at the top
+        setNavbarStyles({
+          boxShadow: "0px 0px 0px rgba(0, 0, 0, 0)", // Reset additional styles when at the top
+        });
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -30,7 +60,18 @@ function Home() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [prevScrollPosition]);
+
+  const navbarClasses = `nav ${scrollDirection === "down" ? "hidden" : ""} ${
+    isNavbarScrolled ? "scrolled" : ""
+  } ${ismobileLinksOpen ? "open" : ""}`;
+
+  const navbarStyle = {
+    top: scrollDirection === "down" ? "-80px" : "0",
+    backgroundColor: navbarBackground,
+    color: navbarFontColor,
+    ...navbarStyles, // Spread additional styles
+  };
 
   return (
     <div className="main-container" id="home">
@@ -40,10 +81,12 @@ function Home() {
 
       <header className="nav-margin">
         <motion.nav
-          className={`nav ${scrollPosition >= 50 ? "scrolled" : ""}`}
+          className={navbarClasses}
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0, duration: 0.2 }}
+          id="navbar"
+          style={navbarStyle}
         >
           <div className="Logo">
             <a href="/">
