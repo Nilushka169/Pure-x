@@ -76,10 +76,9 @@ function Home() {
   return (
     <div className="main-container" id="home">
       <motion.div
-        className={navbarClasses}
-        initial={{ opacity: 0, scale: 0.8, filter: "blur(0px)" }}
+        initial={{ opacity: 0, scale: 0.9, filter: "blur(0px)" }}
         whileInView={{ opacity: 0.7, scale: 1, filter: "blur(5px)" }}
-        transition={{ delay: 0, duration: 1 }}
+        transition={{ delay: 0.05, duration: 0.6 }}
       >
         <img className="backgroundImg" src={background} alt="Background" />
       </motion.div>
@@ -116,7 +115,7 @@ function Home() {
                 to="ourprojects"
                 spy={true}
                 smooth={true}
-                offset={-30}
+                offset={5}
                 duration={750}
               >
                 <li
@@ -227,9 +226,17 @@ function Home() {
           </div>
         </motion.nav>
       </header>
-      <div className="Middle-section">
-        <div className="companyName">PURE-X</div>
-      </div>
+      <motion.div
+        className="Middle-section"
+        initial={{ opacity: 0, scale: 0.6, filter: "blur(5px)" }}
+        whileInView={{ opacity: 1.5, scale: 1, filter: "blur(0px)"}}
+        transition={{ delay: 0.8, duration: 0.7 }}
+      >
+        <div className="companyName">
+          PURE-<span>X</span>
+        </div>
+        <div className="slogan">SOLUTIONS</div>
+      </motion.div>
     </div>
   );
 }
