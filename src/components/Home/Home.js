@@ -48,7 +48,7 @@ function Home() {
       } else {
         setIsNavbarScrolled(false);
         setNavbarBackground("transparent");
-        setNavbarFontColor("#000000"); // Reset to default font color when at the top
+        setNavbarFontColor("#333"); // Reset to default font color when at the top
         setNavbarStyles({
           boxShadow: "0px 0px 0px rgba(0, 0, 0, 0)", // Reset additional styles when at the top
         });
@@ -76,7 +76,7 @@ function Home() {
   return (
     <div className="main-container" id="home">
       <div>
-        <video src={background} autoPlay loop muted></video>
+{/*         <video src={background} autoPlay loop muted></video> */}
       </div>
 
       <header className="nav-margin">
