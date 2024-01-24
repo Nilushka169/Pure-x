@@ -39,6 +39,7 @@ nav {
   padding: 10px;
   justify-content: space-between;
   z-index: 1111111;
+  box-shadow: 4px rgb(0, 0, 0);
 }
 
 
@@ -81,27 +82,28 @@ ul a {
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-size: 21px;
+  font-size: 0.98rem;
   font-weight: 500;
   font-family: "Roboto", serif;
-  color: #ffffff;
   padding: 10px;
   transition: transform 0.5s ease;
+  box-shadow: 4px rgb(0, 0, 0);
 }
 .nav-container.scrolled {
      color: #333333; 
 }
 .nav-container:hover {
   color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
+  /* background: rgba(255, 255, 255, 0.1); */
   backdrop-filter: blur(25px);
-  border-radius: 25px;
+  /* border-radius: 25px; */
   transform: translate(0%, 10%);
+  color: #f6931d;
 }
 .nav-container.scrolled:hover {
-  background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(25px);
-  color: #083663;
+  /* background: rgba(0, 0, 0, 0.1); */
+  /* backdrop-filter: blur(25px); */
+  color: #f6931d;
 }
 .social-icon {
   position: relative;
