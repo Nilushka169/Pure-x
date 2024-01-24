@@ -40,9 +40,13 @@ nav {
   justify-content: space-between;
   z-index: 1111111;
 }
-.nav.scrolled {
-  background-color: rgba(255, 255, 255, 1);
+
+
+/* .nav.scrolled {
+  
 }
+ */
+
 
 .Logo img {
   height: 50px;
@@ -79,14 +83,13 @@ ul a {
   align-items: center;
   font-size: 21px;
   font-weight: 500;
-  font-family: "Cardo", serif;
+  font-family: "Roboto", serif;
   color: #ffffff;
   padding: 10px;
   transition: transform 0.5s ease;
 }
 .nav-container.scrolled {
-    color: #083663;
-
+     color: #333333; 
 }
 .nav-container:hover {
   color: #ffffff;
