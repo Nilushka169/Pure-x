@@ -8,7 +8,7 @@ import { IoMailOpen } from "react-icons/io5";
 import { TiThMenuOutline } from "react-icons/ti";
 import { FaWindowClose } from "react-icons/fa";
 import { motion } from "framer-motion";
-import background from "../../image/background.mp4";
+import background from "../../image/background.jpg";
 
 function Home() {
   const [ismobileLinksOpen, setIsmobileLinksOpen] = useState(false);
@@ -19,7 +19,7 @@ function Home() {
   const [navbarBackground, setNavbarBackground] = useState("transparent");
   const [navbarFontColor, setNavbarFontColor] = useState("#000000"); // Default font color
   const [navbarStyles, setNavbarStyles] = useState({
-    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)", // Example shadow
+    boxShadow: "0px 0px 0px rgba(0, 0, 0, 0.1)", // Example shadow
   });
 
   const dropdownmenuclick = () => {
@@ -43,7 +43,7 @@ function Home() {
         setNavbarBackground("#eaf4f4"); // Change to the desired background color
         /* setNavbarFontColor("#333333"); // Change to the desired font color */
         setNavbarStyles({
-          boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)", // Additional styles when scrolled
+          boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.2)", // Additional styles when scrolled
         });
       } else {
         setIsNavbarScrolled(false);
@@ -75,25 +75,25 @@ function Home() {
 
   return (
     <div className="main-container" id="home">
-      <div>
-{/*         <video src={background} autoPlay loop muted></video> */}
-      </div>
+      <motion.div
+        className={navbarClasses}
+        initial={{ opacity: 0, scale: 0.8, filter: "blur(0px)" }}
+        whileInView={{ opacity: 0.7, scale: 1, filter: "blur(5px)" }}
+        transition={{ delay: 0, duration: 1 }}
+      >
+        <img className="backgroundImg" src={background} alt="Background" />
+      </motion.div>
 
       <header className="nav-margin">
         <motion.nav
           className={navbarClasses}
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0, duration: 0.2 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
           id="navbar"
           style={navbarStyle}
         >
-          <div className="Logo">
-            <a href="/">
-              <img src="./images/logo.png" alt="Logo" />
-              PURE-X
-            </a>
-          </div>
+          <div className="Logo"></div>
           <div className="linkWithIcon">
             <ul className="main-uls">
               <Link
@@ -228,8 +228,7 @@ function Home() {
         </motion.nav>
       </header>
       <div className="Middle-section">
-        <div className="Left-side"></div>
-        <div className="Right-side"></div>
+        <div className="companyName">PURE-X</div>
       </div>
     </div>
   );

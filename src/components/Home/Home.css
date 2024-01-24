@@ -20,10 +20,11 @@ body {
   position: relative;
   z-index: 999;
 }
-.main-container video{
-  width: 100%;
+.main-container .backgroundImg{
   object-fit: cover;
   height: 100vh;
+  width: 100%;
+  z-index: -11111;
   position: absolute;
 }
 .nav-margin {
@@ -39,14 +40,8 @@ nav {
   padding: 10px;
   justify-content: space-between;
   z-index: 1111111;
-  box-shadow: 4px rgb(0, 0, 0);
+  box-shadow: 3px 7px 10px #505050;
 }
-
-
-/* .nav.scrolled {
-  
-}
- */
 
 
 .Logo img {
@@ -82,27 +77,18 @@ ul a {
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-size: 0.98rem;
+  font-size: 1.1rem;
   font-weight: 500;
   font-family: "Roboto", serif;
   padding: 10px;
   transition: transform 0.5s ease;
-  box-shadow: 4px rgb(0, 0, 0);
-}
-.nav-container.scrolled {
-     color: #333333; 
 }
 .nav-container:hover {
   color: #ffffff;
-  /* background: rgba(255, 255, 255, 0.1); */
-  backdrop-filter: blur(25px);
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
   /* border-radius: 25px; */
   transform: translate(0%, 10%);
-  color: #f6931d;
-}
-.nav-container.scrolled:hover {
-  /* background: rgba(0, 0, 0, 0.1); */
-  /* backdrop-filter: blur(25px); */
   color: #f6931d;
 }
 .social-icon {
@@ -297,25 +283,4 @@ ul a {
   margin: auto;
   width: 100%;
   height: 80%;
-}
-
-.Middle-section .Left-side,
-.Middle-section .Right-side{
-  flex: 1;
-  max-width: 55%;
-  box-sizing: border-box;
-}
-.Left-side{
-  position: absolute;
-  left: 0%;
-  top: 19%;
-}
-.Left-side img{
-  width: 65%;
-}
-.Right-side{
-  position: absolute;
-  left: 40%;
-  top: 10%;
-  width: 100%;
 }
