@@ -9,6 +9,7 @@ import { TiThMenuOutline } from "react-icons/ti";
 import { FaWindowClose } from "react-icons/fa";
 import { motion } from "framer-motion";
 import background from "../../image/background.jpg";
+import LogoSVG from "../../image/Logo.svg"
 
 function Home() {
   const [ismobileLinksOpen, setIsmobileLinksOpen] = useState(false);
@@ -229,13 +230,18 @@ function Home() {
       <motion.div
         className="Middle-section"
         initial={{ opacity: 0, scale: 0.6, filter: "blur(5px)" }}
-        whileInView={{ opacity: 1.5, scale: 1, filter: "blur(0px)"}}
+        whileInView={{ opacity: 1.5, scale: 1, filter: "blur(0px)" }}
         transition={{ delay: 0.8, duration: 0.7 }}
       >
-        <div className="companyName">
-          PURE-<span>X</span>
+        <div className="leftSide">
+            <img src={LogoSVG} alt="Logo" className="LogoSvgBG" />
         </div>
-        <div className="slogan">SOLUTIONS</div>
+        <div className="rightSide">
+          <div className="companyName">
+            PURE-<span>X</span>
+          </div>
+          <div className="slogan">SOLUTIONS</div>
+        </div>
       </motion.div>
     </div>
   );
