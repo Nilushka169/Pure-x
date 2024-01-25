@@ -97,8 +97,8 @@ ul a {
   font-weight: 700;
   letter-spacing: 1px;
   font-family: "Roboto", serif;
-  color:#5f5d5d;
-  
+  color: #5f5d5d;
+
   padding: 10px;
   transition: transform 0.5s ease;
 }
@@ -299,13 +299,16 @@ ul a {
   z-index: 1;
   display: flex;
   position: absolute;
-  flex-direction: column;
-  justify-content: center;
   height: 100%;
-  left: 40%;
+  width: 100%;
   align-items: center;
-   line-height: 0.9;
+  justify-content: space-around;
+  line-height: 0.9;
 }
+.LogoSvgBG {
+  width: 100%;
+}
+
 .Middle-section .companyName {
   font-size: 750%;
   font-family: "BackgroundFont1", sans-serif;
