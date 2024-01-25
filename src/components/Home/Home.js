@@ -108,7 +108,7 @@ function Home() {
                     scrollPosition >= 50 ? "scrolled" : ""
                   }`}
                 >
-                  <AiFillHome />
+                  {/* <AiFillHome /> */}
                   Home
                 </li>
               </Link>
@@ -124,7 +124,7 @@ function Home() {
                     scrollPosition >= 50 ? "scrolled" : ""
                   }`}
                 >
-                  <RiProjectorFill />
+                  {/* <RiProjectorFill /> */}
                   Our Projects
                 </li>
               </Link>
@@ -140,7 +140,7 @@ function Home() {
                     scrollPosition >= 50 ? "scrolled" : ""
                   }`}
                 >
-                  <FaExclamationCircle />
+                 {/*  <FaExclamationCircle /> */}
                   About us
                 </li>
               </Link>
@@ -156,7 +156,7 @@ function Home() {
                     scrollPosition >= 50 ? "scrolled" : ""
                   }`}
                 >
-                  <IoMailOpen />
+                  {/* <IoMailOpen /> */}
                   Contact us
                 </li>
               </Link>
@@ -185,25 +185,25 @@ function Home() {
                 <ul>
                   <a href="Home">
                     <li>
-                      <AiFillHome />
+                      {/* <AiFillHome /> */}
                       Home
                     </li>
                   </a>
                   <a href="#OurProjects">
                     <li>
-                      <RiProjectorFill />
+                      {/* <RiProjectorFill /> */}
                       Our Projects
                     </li>
                   </a>
                   <a href="#AboutUs">
                     <li>
-                      <FaExclamationCircle />
+                      {/* <FaExclamationCircle /> */}
                       About us
                     </li>
                   </a>
                   <a href="ContactUs">
                     <li>
-                      <IoMailOpen />
+                      {/* <IoMailOpen /> */}
                       Contact us
                     </li>
                   </a>
