@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
 import { Link } from "react-scroll";
-import { AiFillHome } from "react-icons/ai";
+/* import { AiFillHome } from "react-icons/ai";
 import { FaExclamationCircle } from "react-icons/fa";
 import { RiProjectorFill } from "react-icons/ri";
-import { IoMailOpen } from "react-icons/io5";
+import { IoMailOpen } from "react-icons/io5"; */
 import { TiThMenuOutline } from "react-icons/ti";
 import { FaWindowClose } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -80,6 +80,7 @@ function Home() {
         initial={{ opacity: 0, scale: 0.9, filter: "blur(0px)" }}
         whileInView={{ opacity: 0.7, scale: 1, filter: "blur(5px)" }}
         transition={{ delay: 0.05, duration: 0.6 }}
+        viewport={{ once: true }}
       >
         <img className="backgroundImg" src={background} alt="Background" />
       </motion.div>
@@ -92,6 +93,7 @@ function Home() {
           transition={{ delay: 0.5, duration: 0.5 }}
           id="navbar"
           style={navbarStyle}
+          viewport={{ once: true }}
         >
           <div className="Logo"></div>
           <div className="linkWithIcon">
@@ -140,7 +142,7 @@ function Home() {
                     scrollPosition >= 50 ? "scrolled" : ""
                   }`}
                 >
-                 {/*  <FaExclamationCircle /> */}
+                  {/*  <FaExclamationCircle /> */}
                   About us
                 </li>
               </Link>
@@ -232,9 +234,10 @@ function Home() {
         initial={{ opacity: 0, scale: 0.6, filter: "blur(5px)" }}
         whileInView={{ opacity: 1.5, scale: 1, filter: "blur(0px)" }}
         transition={{ delay: 0.8, duration: 0.7 }}
+        viewport={{ once: true }}
       >
         <div className="leftSide">
-            <img src={LogoSVG} alt="Logo" className="LogoSvgBG" />
+          <img src={LogoSVG} alt="Logo" className="LogoSvgBG" />
         </div>
         <div className="rightSide">
           <div className="companyName">
