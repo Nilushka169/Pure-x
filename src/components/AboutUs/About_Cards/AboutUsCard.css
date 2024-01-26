@@ -34,34 +34,7 @@
   transition: transform 0.8s ease;
   position: absolute;
 }
-.card .ribbon{
-  position: absolute;
-  left: 1rem;
-  top: -1rem;
-  width: 3rem;
-  height: 5rem;
-  background: linear-gradient(rgb(14, 14, 201),rgb(47, 169, 239));
-  color: #fff;
-  text-align: center;
-  line-height: 3rem;
-  z-index: 2;
-}
-.card .ribbon::before{
-  position: absolute;
-  content: "";
-  right: -1.01rem;
-  border: .52rem solid rgb(23, 1, 146);
-  border-right-color: transparent;
-  border-top-color: transparent;
-}
-.card .ribbon::after{
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  border: 1.5rem solid transparent;
-  border-bottom-color: white;
-}
+
 
 .card .card-inner .front,
 .card .card-inner .back {
@@ -104,7 +77,8 @@
     transition: 0.3s;
 }
 .card .card-inner .front:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
     transition: 0.4s ease-in-out;
 }
 
