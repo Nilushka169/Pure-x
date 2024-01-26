@@ -42,8 +42,6 @@ return (
           color: "white",
           cursor: "pointer",
           transition: "transform 0.3s ease",
-          ":hover": {
-                transform: "scale(1.1)",}
         }}
         onClick={scrollUp}
       >
