@@ -1,17 +1,88 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./AboutUs.css";
 import DataAnalytics from "./Icon/data-analytics.svg"
 import Nearshore from "./Icon/nearshore.svg"
-import ProductDesign from"./Icon/product-design.svg"
-import ProductFundamentals from"./Icon/product-fundamentals.svg"
+import ProductDesign from "./Icon/product-design.svg"
+import ProductFundamentals from "./Icon/product-fundamentals.svg"
 import SoftwareDevelopment from "./Icon/software-development.svg"
-import TechnologyConsulting from"./Icon/technology-consulting.svg"
+import TechnologyConsulting from "./Icon/technology-consulting.svg"
 import AboutUsCard from './About_Cards/AboutUsCard';
 import journey from "./Icon/journey-img.svg"
-import CountUp /*, { useCountUp } */ from 'react-countup';
+import CountUp from 'react-countup';
 import TabListFun from './ToolsAndTechnologies/ToolsAndTechnologies';
+import { motion } from "framer-motion";
 
 function AboutUs() {
+  const serviceCardsData = [
+    {
+      icon: ProductDesign,
+      title: "Product Design",
+      description: "Human-centered design for engaging customer experiences",
+      delay: 0.8,
+    },
+    {
+      icon: ProductFundamentals,
+      title: "Product Fundamentals",
+      description: "Defining and validating your product’s success",
+      delay: 1.3,
+    },
+    {
+      icon: Nearshore,
+      title: "Nearshore Software Development​",
+      description: "Accelerate development with Agile Nearshore teams",
+      delay: 1.8,
+    },
+    {
+      icon: DataAnalytics,
+      title: "Data Analytics",
+      description: "Unlock business insights with user-centric data analytics",
+      delay: 2.3,
+    },
+    {
+      icon: SoftwareDevelopment,
+      title: "Software Development",
+      description: "Agile, full-stack software development for modern solutions",
+      delay: 2.8,
+    },
+    {
+      icon: TechnologyConsulting,
+      title: "Technology Consulting",
+      description: "Modernize your business with expert technology consulting",
+      delay: 3.3,
+    },
+  ];
+
+   const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.5,
+        staggerChildren: 0.4
+      }
+    }
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delayChildren: 0.5,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+ const H1_Animate={
+  hidden:{
+    scale:0
+  }
+ }
+
+
   return (
     <div className='AboutUS-main-container' id="aboutus">
       <section className='section1'>
@@ -27,53 +98,39 @@ function AboutUs() {
 
         </div>
       </section>
+
+      
       <section className='section2'>
         <h1 className='sectionTitle'>&#60;Our Services&#47;&#62;</h1>
-          <div className='OurServicesContainer'>
-            <div className='ServiceCardContainer'>
-              <div className='ServiceCard'>
-                <img src={ProductDesign} alt="Typescript_logo"/>
-                <h1>Product Design</h1>
-                <h2>Human-centered design for engaging customer experiences​</h2>
-              </div>
-            </div>
-            <div className='ServiceCardContainer'>
-                <div className='ServiceCard'>
-                  <img src={ProductFundamentals} alt="Typescript_logo"/>
-                  <h1>Product Fundamentals</h1>
-                  <h2>Defining and validating your product’s success</h2>
-                </div>
-            </div>
-              <div className='ServiceCardContainer'>
-                <div className='ServiceCard'>
-                  <img src={Nearshore} alt="Typescript_logo"/>
-                  <h1>Nearshore Software Development​</h1>
-                  <h2>Accelerate development with Agile Nearshore teams</h2>
-                </div>
-            </div>
-              <div className='ServiceCardContainer'>
-                <div className='ServiceCard'>
-                  <img src={DataAnalytics} alt="Typescript_logo"/>
-                  <h1>Data Analytics</h1>
-                  <h2>Unlock business insights with user-centric data analytics</h2>
-                </div>
-              </div>
-              <div className='ServiceCardContainer'>
-                <div className='ServiceCard'>
-                  <img src={SoftwareDevelopment} alt="Typescript_logo"/>
-                  <h1>Software Development</h1>
-                  <h2>Agile, full-stack software development for modern solutions</h2>
-                </div>
-              </div>
-              <div className='ServiceCardContainer'>
-                <div className='ServiceCard'>
-                  <img src={TechnologyConsulting} alt="Typescript_logo"/>
-                  <h1>Technology Consulting</h1>
-                  <h2>Modernize your business with expert technology consulting</h2>
-                </div>
-              </div>
-            </div>
+
+                <motion.ul
+          className="OurServicesContainer"
+          variants={container}
+          initial="hidden"
+          animate="visible"
+        >
+          {serviceCardsData.map((card, index) => (
+            <motion.li key={index} className="ServiceCardContainer" variants={item}>
+              
+                <img src={card.icon} alt={`Service Card ${index + 1}`} />
+                <motion.h1 key={index}
+                  variants={item}
+                >
+                  {card.title}
+                </motion.h1>
+                <motion.h2
+                  variants={item}
+                >
+                  {card.description}
+                </motion.h2>
+                </motion.li>
+            
+          ))}
+        </motion.ul>
+
       </section>
+
+
       <section className='section3'>
         <h1 className='sectionTitle'>&#60;Tools and Technologies&#47;&#62;</h1>
           <div className='TechnologiesContainer'>

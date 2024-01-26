@@ -77,10 +77,9 @@ function Home() {
   return (
     <div className="main-container" id="home">
       <motion.div
-        initial={{ opacity: 0, scale: 0.9, filter: "blur(0px)" }}
-        whileInView={{ opacity: 0.7, scale: 1, filter: "blur(5px)" }}
-        transition={{ delay: 0.05, duration: 0.6 }}
-        viewport={{ once: true }}
+        initial={{ opacity: 0, filter: "blur(0px)" }}
+        whileInView={{ opacity: 0.7, filter: "blur(5px)" }}
+        transition={{ delay: 0.1, duration: 0.8 }}
       >
         <img className="backgroundImg" src={background} alt="Background" />
       </motion.div>
@@ -90,7 +89,7 @@ function Home() {
           className={navbarClasses}
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 1.5, duration: 0.5 }}
           id="navbar"
           style={navbarStyle}
           viewport={{ once: true }}
