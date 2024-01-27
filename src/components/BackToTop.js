@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { IoMdRocket } from "react-icons/io";
 
 function BackToTop(){
     const[backToTop,setBackToTop] = useState(false);
@@ -31,8 +32,8 @@ return (
           position: "fixed",
           bottom: "50px",
           right: "50px",
-          height: "40px",
-          width: "40px",
+          height: "45px",
+          width: "45px",
           fontSize: "35px",
           fontWeight: "900",
           border: "none",
@@ -45,7 +46,7 @@ return (
         }}
         onClick={scrollUp}
       >
-        ^
+        <IoMdRocket />
       </button>
     )}
   </div>
