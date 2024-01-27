@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import "./AboutUs.css";
 import DataAnalytics from "./Icon/data-analytics.svg"
 import Nearshore from "./Icon/nearshore.svg"
@@ -10,7 +10,7 @@ import AboutUsCard from './About_Cards/AboutUsCard';
 import journey from "./Icon/journey-img.svg"
 import CountUp from 'react-countup';
 import TabListFun from './ToolsAndTechnologies/ToolsAndTechnologies';
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 function AboutUs() {
   const serviceCardsData = [
@@ -18,39 +18,45 @@ function AboutUs() {
       icon: ProductDesign,
       title: "Product Design",
       description: "Human-centered design for engaging customer experiences",
-      delay: 0.8,
+      /* delay: 0.8, */
     },
     {
       icon: ProductFundamentals,
       title: "Product Fundamentals",
       description: "Defining and validating your product’s success",
-      delay: 1.3,
+      /* delay: 1.3, */
     },
     {
       icon: Nearshore,
       title: "Nearshore Software Development​",
       description: "Accelerate development with Agile Nearshore teams",
-      delay: 1.8,
+      /* delay: 1.8, */
     },
     {
       icon: DataAnalytics,
       title: "Data Analytics",
       description: "Unlock business insights with user-centric data analytics",
-      delay: 2.3,
+     /*  delay: 2.3, */
     },
     {
       icon: SoftwareDevelopment,
       title: "Software Development",
       description: "Agile, full-stack software development for modern solutions",
-      delay: 2.8,
+      /* delay: 2.8, */
     },
     {
       icon: TechnologyConsulting,
       title: "Technology Consulting",
       description: "Modernize your business with expert technology consulting",
-      delay: 3.3,
+      /* delay: 3.3, */
     },
   ];
+
+
+
+  const ref = useRef(null);
+
+  const isInView = useInView(ref, {amount: 0.45 , once:true }) ;  //element eke 0.3 k penna thiyeddi animate wenn patan gnnwa
 
    const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -58,7 +64,7 @@ function AboutUs() {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 0.5,
+        delayChildren: 0,
         staggerChildren: 0.4
       }
     }
@@ -71,14 +77,35 @@ function AboutUs() {
       opacity: 1,
       transition: {
         delayChildren: 0.5,
-        staggerChildren: 0.2
+        staggerChildren: 0.2,
       }
     }
   };
 
- const H1_Animate={
+ const Title={
   hidden:{
-    scale:0
+    opacity:0
+  },
+  visible:{
+    opacity:1,
+
+    transition:{
+      duration:3
+    },
+  },
+ };
+
+ const ImageAnime ={
+  hidden:{
+    y:-10,
+    opacity:0
+  },
+  visible:{
+    opacity:1,
+    y:0,
+    transition:{
+      duration:2
+    }
   }
  }
 
@@ -100,31 +127,31 @@ function AboutUs() {
       </section>
 
       
-      <section className='section2'>
+      <section className='section2' ref={ref}>
         <h1 className='sectionTitle'>&#60;Our Services&#47;&#62;</h1>
 
                 <motion.ul
           className="OurServicesContainer"
+          
           variants={container}
           initial="hidden"
-          animate="visible"
+          animate={isInView ? 'visible' : 'hidden'}  // 0.5k penna awoth visible wenwa naththm hidden wenwa
         >
           {serviceCardsData.map((card, index) => (
             <motion.li key={index} className="ServiceCardContainer" variants={item}>
               
-                <img src={card.icon} alt={`Service Card ${index + 1}`} />
-                <motion.h1 key={index}
-                  variants={item}
-                >
+                <motion.img src={card.icon} alt={`Service Card ${index + 1}`} variants={ImageAnime}/>   
+                <motion.h1 key={index} variants={Title}>
+
                   {card.title}
+
                 </motion.h1>
-                <motion.h2
-                  variants={item}
-                >
+                <motion.h2 key={index} variants={Title}>
+
                   {card.description}
+
                 </motion.h2>
                 </motion.li>
-            
           ))}
         </motion.ul>
 
