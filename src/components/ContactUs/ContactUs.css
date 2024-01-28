@@ -59,19 +59,19 @@ textarea {
 input[type="submit"] {
   height: 50px;
   width: 160px; /* Adjust the width as needed */
-  background-color:  #f6931d;
-  color: #fff;
+  background-color:  #fff;
+  color: #f6931d;
+  border: 2px solid #f6931d;
   cursor: pointer;
   transition: background-color 0.3s;
-  border: none;
   border-radius: 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
 input[type="submit"]:hover {
-  background-color: #fff;
-  color: #f6931d;
+  background-color: #f6931d;
+  color: #fff;
   border: 1px solid #f6931d;
 }
 
