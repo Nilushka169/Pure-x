@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import './ContactUs.css';
 import ContactUsSvg from '../../image/contact.svg'
+import { delay, motion, useInView } from "framer-motion";
 
 function ContactUs() {
   const form = useRef();
@@ -45,11 +46,33 @@ function ContactUs() {
       );
   };
 
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, {amount: 0.4 , once:true }) ;  //element eke 0.3 k penna thiyeddi animate wenn patan gnnwa
+
+  const container = {
+    hidden: { 
+      opacity: 0,
+      y:100 
+      },
+
+    visible: {
+      opacity: 1,
+      y:0,
+      
+    }
+  };
+
+
   return (
     <div className="ContactUs-page" id="contactus">
-    <div className="contact-container" >
+    <motion.div className="contact-container" 
+    variants={container} ref={ref}
+    initial="hidden"
+    animate={isInView ? 'visible' : 'hidden'}
+    transition={{delay:0.3,duration:0.5}}>
       <h2>Let’s Discuss Your Project</h2>
-    <div className="contact-form-container" >
+    <div className="contact-form-container">
       <div className="contact-form">
         {submissionSuccess ? (
           <p className="submission-success">Submission successful! We'll get in touch with you soon.</p>
@@ -81,7 +104,7 @@ function ContactUs() {
         <img src={ContactUsSvg} alt="ContactSvg"/>
       </div>
     </div> 
-    </div>
+    </motion.div>
     </div>
   );
 }

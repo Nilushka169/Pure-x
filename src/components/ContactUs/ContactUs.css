@@ -39,7 +39,7 @@
   text-align: center;
   color: #333;
   margin-bottom: 15px;
-  font-size: 1.9rem;
+  font-size: 2.5rem;
   /* display: inline-block;
   margin-inline: auto;
    */
@@ -124,4 +124,11 @@ input[type="submit"]:hover {
   .SvgContainer {
     display: none;
   }
+}
+
+
+textarea:focus,
+input:focus {
+  border-color: #f6931d; 
+  outline: none; 
 }
