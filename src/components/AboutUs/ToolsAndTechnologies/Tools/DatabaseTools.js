@@ -1,38 +1,36 @@
 import React from 'react';
-import "./Tools.css"
-import sql_logo from "./Icons/Database/SQL-server.svg"
-import mongodb_logo from "./Icons/Database/mongodb.svg"
-import mysql_logo from "./Icons/Database/my-SQL.svg"
-import postgre_logo from "./Icons/Database/postgre.svg"
+import "./Tools.css";
+import sql_logo from "./Icons/Database/SQL-server.svg";
+import mongodb_logo from "./Icons/Database/mongodb.svg";
+import mysql_logo from "./Icons/Database/my-SQL.svg";
+import postgre_logo from "./Icons/Database/postgre.svg";
+
+const ToolCard = ({ logo, name }) => (
+  <div className='ToolsCard'>
+    <div className='T_cards'>
+      <img src={logo} alt={`${name}_logo`} />
+    </div>
+    <p>{name}</p>
+  </div>
+);
 
 function DatabaseTools() {
-  return (
+  const databaseToolsData = [
+    { logo: sql_logo, name: 'SQL Server' },
+    { logo: mongodb_logo, name: 'MongoDB' },
+    { logo: mysql_logo, name: 'MySQL' },
+    { logo: postgre_logo, name: 'PostgreSQL' },
+  ];
 
-        <div className='ToolsAndTechnologiesContainer'>
-          <div className='ToolsCardContainer'>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={sql_logo} alt="sql_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={mongodb_logo} alt="mongodb_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={mysql_logo}alt="mysql_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={postgre_logo}alt="postgre_logo"/>
-              </div>
-            </div>
-          </div>
-        </div>
-  )
+  return (
+    <div className='ToolsAndTechnologiesContainer'>
+      <div className='ToolsCardContainer'>
+        {databaseToolsData.map((tool, index) => (
+          <ToolCard key={index} logo={tool.logo} name={tool.name} />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default DatabaseTools;

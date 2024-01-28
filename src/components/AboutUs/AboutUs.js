@@ -11,6 +11,7 @@ import journey from "./Icon/journey-img.svg"
 import CountUp from 'react-countup';
 import TabListFun from './ToolsAndTechnologies/ToolsAndTechnologies';
 import { motion, useInView } from "framer-motion";
+import AnimatedTextCharacter from '../AnimatedTextCharacter';
 
 function AboutUs() {
   const serviceCardsData = [
@@ -64,8 +65,8 @@ function AboutUs() {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 0,
-        staggerChildren: 0.4
+        delayChildren: 0.4,
+        staggerChildren: 0.2
       }
     }
   };
@@ -128,7 +129,7 @@ function AboutUs() {
 
       
       <section className='section2' ref={ref}>
-        <h1 className='sectionTitle'>&#60;Our Services&#47;&#62;</h1>
+      <h1 className='sectionTitle'><AnimatedTextCharacter text="&#60;Our Services&#47;&#62;"/></h1> 
 
                 <motion.ul
           className="OurServicesContainer"
@@ -140,13 +141,13 @@ function AboutUs() {
           {serviceCardsData.map((card, index) => (
             <motion.li key={index} className="ServiceCardContainer" variants={item}>
               
-                <motion.img src={card.icon} alt={`Service Card ${index + 1}`} variants={ImageAnime}/>   
-                <motion.h1 key={index} variants={Title}>
+                <motion.img src={card.icon} alt={`Service Card ${index + 1}`} /* variants={ImageAnime} *//>   
+                <motion.h1 /* key={index} variants={Title} */>
 
                   {card.title}
 
                 </motion.h1>
-                <motion.h2 key={index} variants={Title}>
+                <motion.h2 /* key={index} variants={Title} */>
 
                   {card.description}
 
@@ -159,13 +160,13 @@ function AboutUs() {
 
 
       <section className='section3'>
-        <h1 className='sectionTitle'>&#60;Tools and Technologies&#47;&#62;</h1>
+        <h1 className='sectionTitle'><AnimatedTextCharacter text='&#60;Tools and Technologies&#47;&#62;'/></h1>
           <div className='TechnologiesContainer'>
             <TabListFun/>
           </div>
       </section>
       <section className='section4'>
-        <h1 className='sectionTitle'>&#60;A Treak Record Of Excellence And Happy Customers&#47;&#62;</h1>
+        <h1 className='sectionTitle'><AnimatedTextCharacter text='&#60;A Treak Record Of Excellence And Happy Customers&#47;&#62;'/></h1>
           <div className='PercentageContainer'>
             <div className='Top'>
               <div className='counterContainer'>
@@ -268,7 +269,7 @@ function AboutUs() {
           </div>
       </section>
       <section className='section5'>
-        <h1 className='sectionTitle'>&#60;Meet Our Experts&#47;&#62;</h1>
+        <h1 className='sectionTitle'><AnimatedTextCharacter text='&#60;Meet Our Experts&#47;&#62;'/></h1>
         <AboutUsCard/>
       </section>
     </div>

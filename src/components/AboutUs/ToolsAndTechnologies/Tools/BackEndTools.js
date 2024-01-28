@@ -1,46 +1,38 @@
 import React from 'react';
-import "./Tools.css"
-import php_logo from "./Icons/Backend/PHP.svg"
-import codeigniter_logo from "./Icons/Backend/codeigniter-svg.svg"
-import laravel_logo from "./Icons/Backend/laravel.svg"
-import nodejs_logo from "./Icons/Backend/nodejs-svg.svg"
-import python_logo from "./Icons/Backend/python.svg"
+import "./Tools.css";
+import php_logo from "./Icons/Backend/PHP.svg";
+import codeigniter_logo from "./Icons/Backend/codeigniter-svg.svg";
+import laravel_logo from "./Icons/Backend/laravel.svg";
+import nodejs_logo from "./Icons/Backend/nodejs-svg.svg";
+import python_logo from "./Icons/Backend/python.svg";
 
-
+const ToolCard = ({ logo, name }) => (
+  <div className='ToolsCard'>
+    <div className='T_cards'>
+      <img src={logo} alt={`${name}_logo`} />
+    </div>
+    <p>{name}</p>
+  </div>
+);
 
 function BackEndTools() {
-  return (
+  const backendToolsData = [
+    { logo: php_logo, name: 'PHP' },
+    { logo: codeigniter_logo, name: 'CodeIgniter' },
+    { logo: laravel_logo, name: 'Laravel' },
+    { logo: nodejs_logo, name: 'Node.js' },
+    { logo: python_logo, name: 'Python' },
+  ];
 
-        <div className='ToolsAndTechnologiesContainer'>
-          <div className='ToolsCardContainer'>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={php_logo} alt="php_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={codeigniter_logo} alt="codeigniter_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={laravel_logo}alt="laravel_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={nodejs_logo}alt="nodejs_logo"/>
-              </div>
-            </div>
-            <div className='ToolsCard'>
-              <div className='T_cards'>
-                <img src={python_logo}alt="python_logo"/>
-              </div>
-            </div>
-          </div>
-        </div>
-  )
+  return (
+    <div className='ToolsAndTechnologiesContainer'>
+      <div className='ToolsCardContainer'>
+        {backendToolsData.map((tool, index) => (
+          <ToolCard key={index} logo={tool.logo} name={tool.name} />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default BackEndTools;
