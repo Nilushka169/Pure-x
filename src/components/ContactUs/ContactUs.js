@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import './ContactUs.css';
+import ContactUsSvg from '../../image/contact.svg'
 
 function ContactUs() {
   const form = useRef();
@@ -45,8 +46,10 @@ function ContactUs() {
   };
 
   return (
-    <div className="contact-container" id="contactus">
+    <div className="ContactUs-page" id="contactus">
+    <div className="contact-container" >
       <h2>Let’s Discuss Your Project</h2>
+    <div className="contact-form-container" >
       <div className="contact-form">
         {submissionSuccess ? (
           <p className="submission-success">Submission successful! We'll get in touch with you soon.</p>
@@ -74,6 +77,11 @@ function ContactUs() {
           </form>
         )}
       </div>
+      <div className="SvgContainer">
+        <img src={ContactUsSvg} alt="ContactSvg"/>
+      </div>
+    </div> 
+    </div>
     </div>
   );
 }

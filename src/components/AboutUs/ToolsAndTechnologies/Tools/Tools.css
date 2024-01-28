@@ -1,3 +1,8 @@
+
+.body{
+    font-family: 'Roboto', sans-serif;
+}
+
 .ToolsAndTechnologiesContainer{
     /* border:1px solid red; */
     display: flex;
@@ -35,13 +40,21 @@
 }
 
 .T_cards{
-    margin: auto;
+    margin: 0.5rem auto 0;
     flex-wrap: wrap;
     /* border: 1px solid green; */
 }
-.T_cards img{
-    width:100px;
-    
+/* .T_cards img{
+    width:90px; 
+} */
+
+.ToolsCard p{
+    text-align: center;
+    margin: auto;
+    font-size: 0.8rem;
+    width: 100%;
+    display: inline-block;
+    height: 0.9rem;
 }
 
 .ToolsContentContainer{
