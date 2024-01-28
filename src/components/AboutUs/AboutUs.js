@@ -90,7 +90,7 @@ function AboutUs() {
     opacity:1,
 
     transition:{
-      duration:3
+      duration:0.5
     },
   },
  };
@@ -104,7 +104,7 @@ function AboutUs() {
     opacity:1,
     y:0,
     transition:{
-      duration:2
+      duration:0.5
     }
   }
  }
@@ -174,8 +174,8 @@ function AboutUs() {
                       scrollSpyDelay={1000}
                       start={0}
                       end={4}
-                      duration={3}
-                      delay={0.3}
+                      duration={2}
+                      delay={0.2}
                       separator=" "
                       decimals={0}
                       decimal=","
@@ -198,7 +198,7 @@ function AboutUs() {
                         scrollSpyDelay={1000}
                         start={0}
                         end={80}
-                        duration={3.5}
+                        duration={2}
                         delay={0.3}
                         separator=" "
                         decimals={0}
@@ -215,7 +215,7 @@ function AboutUs() {
                         scrollSpyDelay={1000}
                         start={0}
                         end={170}
-                        duration={4}
+                        duration={2}
                         delay={0.3}
                         separator=" "
                         decimals={0}
@@ -234,7 +234,7 @@ function AboutUs() {
                       scrollSpyDelay={1000}
                       start={0}
                       end={8}
-                      duration={3}
+                      duration={2}
                       delay={0.3}
                       separator=" "
                       decimals={0}
@@ -251,7 +251,7 @@ function AboutUs() {
                       scrollSpyDelay={1000}
                       start={0}
                       end={4.9}
-                      duration={3}
+                      duration={2}
                       delay={0.3}
                       separator=" "
                       decimals={1}
