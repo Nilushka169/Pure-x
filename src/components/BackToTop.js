@@ -39,10 +39,11 @@ return (
           border: "none",
           borderRadius: "50%",
           zIndex: "3333333",
-          backgroundColor: "black",
-          color: "white",
+          backgroundColor: "white",
+          color: "#808B96",
           cursor: "pointer",
           transition: "transform 0.3s ease",
+          boxShadow: "0 5px 10px rgba(0, 0, 0, 0.5)",
         }}
         onClick={scrollUp}
       >

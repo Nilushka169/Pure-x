@@ -55,11 +55,11 @@ function ContactUs() {
             {/* {validationError && <p className="validation-error">{validationError}</p>} */}
             <div className="input-group">
               <div>
-                <label>Name</label>
+                <label>Your Name</label>
                 <input type="text" name="from_name" />
               </div>
               <div>
-                <label>Email</label>
+                <label>Your Email</label>
                 <input type="email" name="from_mail" />
               </div>
             </div>
