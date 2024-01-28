@@ -57,13 +57,13 @@ textarea {
 }
 
 input[type="submit"] {
-  height: 50px;
+  height: 5%;
   width: 160px; /* Adjust the width as needed */
   background-color:  #fff;
   color: #f6931d;
-  border: 2px solid #f6931d;
+  border: 1px solid #f6931d;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.4s;
   border-radius: 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
