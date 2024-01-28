@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import './ContactUs.css';
 import ContactUsSvg from '../../image/contact.svg'
-import { delay, motion, useInView } from "framer-motion";
+import {motion, useInView } from "framer-motion";
 
 function ContactUs() {
   const form = useRef();

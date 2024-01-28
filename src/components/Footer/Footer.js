@@ -1,9 +1,36 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import "./Footer.css";
+import {motion, useInView } from "framer-motion";
+
+
+
+
 
 function Footer() {
+
+    const ref = useRef(null);
+  const isInView = useInView(ref, {amount: 0.4 , once:true }) ;  //element eke 0.3 k penna thiyeddi animate wenn patan gnnwa
+
+    const container = {
+    hidden: { 
+    opacity: 0,
+    y:100 
+    },
+
+    visible: {
+    opacity: 1,
+    y:0,
+    
+    }
+};
+
   return (
-    <div className='Footer'>
+    <motion.div className='Footer'
+    variants={container}
+    initial="hidden"
+    animate={isInView ? 'visible' : 'hidden'}
+    transition={{delay:0.3,duration:0.8}}
+    ref={ref}>
         <div className='FooterContainer'>
             <div className='row'>
                 <div className='Footer-col'>
@@ -45,10 +72,10 @@ function Footer() {
             </div>
             <hr></hr>
             <div className='Bottom'>
-               <h4>© 2013-2024 All Rights Reserved </h4> 
+            <h4>© 2013-2024 All Rights Reserved </h4> 
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 
