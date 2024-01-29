@@ -119,3 +119,11 @@
 .card .card-inner .front .social-icons .linkedin:hover{
   color: #da0404;
 }
+
+
+@media all and (max-width: 1030px) {
+  .card{
+   width: 300px;
+   
+  }
+}
