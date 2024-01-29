@@ -167,6 +167,7 @@ function AboutUs() {
       </section>
       <section className='section4'>
         <h1 className='sectionTitle'><AnimatedTextCharacter text='&#60;A Treak Record Of Excellence And Happy Customers&#47;&#62;'/></h1>
+        <h1 className='hidden'>&#60;A Treak Record Of Excellence And Happy Customers&#47;&#62;</h1>
           <div className='PercentageContainer'>
             <div className='Top'>
               <div className='counterContainer'>

@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <BackToTop/>
-      <Home/>
+      {/* <Home/> */}
       <OurProjects/>
       <AboutUs/>
       <ContactUs/>
