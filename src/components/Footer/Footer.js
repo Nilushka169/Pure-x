@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import "./Footer.css";
 import {motion, useInView } from "framer-motion";
 
@@ -8,8 +8,22 @@ import {motion, useInView } from "framer-motion";
 
 function Footer() {
 
-    const ref = useRef(null);
-  const isInView = useInView(ref, {amount: 0.4 , once:true }) ;  //element eke 0.3 k penna thiyeddi animate wenn patan gnnwa
+const ref = useRef(null);
+const [refAmount, setRefAmount] = useState(window.innerWidth < 768 ? 0.1 : 0.3);
+
+const handleResize = () => {
+    setRefAmount(window.innerWidth < 768 ? 0.1 : 0.3);
+};
+useEffect(() => {
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+window.removeEventListener('resize', handleResize);
+    };
+}, []);
+
+  const isInView = useInView(ref, { amount: refAmount, once: true }); ;  //element eke 0.3 k penna thiyeddi animate wenn patan gnnwa
 
     const container = {
     hidden: { 
