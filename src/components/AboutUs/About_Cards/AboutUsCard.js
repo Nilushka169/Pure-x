@@ -124,14 +124,14 @@ function AboutUsCard() {
     if (activeCard !== null) {
       timeoutId = setTimeout(() => {
         setActiveCard(null);
-      }, 8000);
+      }, 8000000);
     }
 
     return () => clearTimeout(timeoutId);
   }, [activeCard]);
 
   return (
-    <div className="full-page" >
+    <div className="full-page">
       <div className="aboutUs-main-container">
         {items.map((item, index) => (
           <div
@@ -140,8 +140,7 @@ function AboutUsCard() {
             onClick={() => handleFlip(index)}
           >
             <div className={`card ${activeCard === index ? "cardFlip" : ""}`}>
-              <span className="ribbon">
-              </span>
+              <span className="ribbon"></span>
               <div className="card-inner">
                 {/* front */}
                 <div className="front">
@@ -156,13 +155,25 @@ function AboutUsCard() {
                   <h1 className="name">{item.profile.name}</h1>
                   <h5 className="position">{item.profile.position}</h5>
                   <div className="social-icons" onClick={handleLinkClick}>
-                    <a href={item.social.linkedin} target="_" className="linkedin">
+                    <a
+                      href={item.social.linkedin}
+                      target="_"
+                      className="linkedin"
+                    >
                       <BsLinkedin />
                     </a>
-                    <a href={item.social.twitter} target="_" className="twitter">
+                    <a
+                      href={item.social.twitter}
+                      target="_"
+                      className="twitter"
+                    >
                       <BsTwitter />
                     </a>
-                    <a href={item.social.facebook} target="_" className="facebook">
+                    <a
+                      href={item.social.facebook}
+                      target="_"
+                      className="facebook"
+                    >
                       <BsFacebook />
                     </a>
                   </div>
@@ -170,7 +181,26 @@ function AboutUsCard() {
 
                 {/* back */}
                 <div className="back">
-                  <h1>Description</h1>
+                  <div className="textContainerAboutUs">
+                    <div className="textContainerTop">
+                      <h1 className="name">{item.profile.name}</h1>
+                      <h4 className="position">{item.profile.position}</h4>
+                    </div>
+                    <p>
+                      Type here your personal description for about us.Type here
+                      your personal description for about us.Type here your
+                      personal description for about us.Type here your personal
+                      description for about us.Type here your personal
+                      description for about us.
+                    </p>
+                  </div>
+                  <div className="backContainer">
+                    <img
+                      src={item.profile.picture}
+                      className="profilePic"
+                      alt="profile"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

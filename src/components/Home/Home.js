@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
 import { Link } from "react-scroll";
-import { TiThMenuOutline } from "react-icons/ti";
+import { ImMenu } from "react-icons/im";
 import { FaWindowClose } from "react-icons/fa";
 import { motion } from "framer-motion";
 import background from "../../image/background.jpg";
@@ -178,7 +178,7 @@ function Home() {
                 </a>
               </div>
               <div className="dropdownmenu" onClick={dropdownmenuclick}>
-                {ismobileLinksOpen ? <FaWindowClose /> : <TiThMenuOutline />}
+                {ismobileLinksOpen ? <FaWindowClose /> : <ImMenu />}
               </div>
               <div
                 className={
@@ -238,15 +238,15 @@ function Home() {
         viewport={{ once: true }}
       >
         <div className="LogoAndTitleContainer">
-        <div className="leftSide">
-          <img src={LogoSVG} alt="Logo" className="LogoSvgBG" />
-        </div>
-        <div className="rightSide">
-          <div className="companyName">
-            PURE-<span>X</span>
+          <div className="leftSide">
+            <img src={LogoSVG} alt="Logo" className="LogoSvgBG" />
           </div>
-          <div className="slogan">SOLUTIONS</div>
-        </div>
+          <div className="rightSide">
+            <div className="companyName">
+              PURE-<span>X</span>
+            </div>
+            <div className="slogan">SOLUTIONS</div>
+          </div>
         </div>
         <motion.div
           className="Bottom-section"

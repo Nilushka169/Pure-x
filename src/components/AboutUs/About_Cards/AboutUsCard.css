@@ -48,6 +48,7 @@
   align-items: center;
   backface-visibility: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 .card .card-inner .front h1,h5,
 .card .card-inner .back h1{
@@ -83,6 +84,40 @@
 .card .card-inner .back {
   background-color: #ffffff;
   transform: rotateY(180deg);
+}
+.card .card-inner .back .backContainer img{
+  opacity: 0.2;
+  position: relative;
+  left: -10%;
+}
+.card .card-inner .back .textContainerAboutUs {
+  position: absolute;
+  padding: 5px;
+  width: 100%;
+  display:flex ;
+  flex-direction: column;
+  align-items: end;
+}
+.card .card-inner .back .textContainerAboutUs .textContainerTop{
+  display:flex ;
+  flex-direction: column;
+
+}
+.card .card-inner .back .textContainerAboutUs h1{
+  padding: 5px;
+  font-weight: 700;
+  display: flex;
+    justify-content: end;
+}
+.card .card-inner .back .textContainerAboutUs h4{
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: end;
+}
+.card .card-inner .back .textContainerAboutUs p{
+  padding-bottom: 25px;
+  display: flex;
+  text-align: justify;
 }
 .card .card-inner .front .profilePic-container{
   display: flex;
