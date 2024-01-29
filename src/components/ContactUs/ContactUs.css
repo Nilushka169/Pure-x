@@ -92,7 +92,7 @@ input[type="submit"] {
   width: 160px;
   background-color: rgb(255, 255, 255,0.2);
   color: #f6931d;
-  border: 1px solid #ffffff;
+  border: 1px solid  #f6931d;
   cursor: pointer;
   transition: background-color 0.4s;
   border-radius: 0.5rem;
@@ -124,6 +124,13 @@ input[type="submit"]:hover {
   font-size: 1.6rem;
 }
 
+textarea:focus,
+input:focus {
+  border-color: #f6931d; 
+  outline: none; 
+}
+
+
 @media all and (max-width: 950px) {
   .SvgContainer {
     display: none;
@@ -144,15 +151,15 @@ input[type="submit"]:hover {
   }
 
   input,
-textarea {
+  textarea {
   background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgb(255, 255, 255);
-}
+  }
+  textarea:focus,
+  input:focus {
+    border-color: #333; 
+    outline: none; 
+  }
 }
 
-textarea:focus,
-input:focus {
-  border-color: #333; 
-  outline: none; 
-}
