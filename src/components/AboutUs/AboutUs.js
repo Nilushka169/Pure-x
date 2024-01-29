@@ -130,6 +130,7 @@ function AboutUs() {
       
       <section className='section2' ref={ref}>
       <h1 className='sectionTitle'><AnimatedTextCharacter text="&#60;Our Services&#47;&#62;"/></h1> 
+      <h1 className='hidden'>&#60;Our Services&#47;&#62;</h1>
 
                 <motion.ul
           className="OurServicesContainer"
@@ -161,6 +162,7 @@ function AboutUs() {
 
       <section className='section3'>
         <h1 className='sectionTitle'><AnimatedTextCharacter text='&#60;Tools and Technologies&#47;&#62;'/></h1>
+        <h1 className='hidden'>&#60;Tools and Technologies&#47;&#62;</h1>
           <div className='TechnologiesContainer'>
             <TabListFun/>
           </div>
@@ -271,6 +273,7 @@ function AboutUs() {
       </section>
       <section className='section5'>
         <h1 className='sectionTitle'><AnimatedTextCharacter text='&#60;Meet Our Experts&#47;&#62;'/></h1>
+        <h1 className='hidden'>&#60;Meet Our Experts&#47;&#62;</h1>
         <AboutUsCard/>
       </section>
     </div>
