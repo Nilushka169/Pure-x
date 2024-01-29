@@ -144,6 +144,9 @@ ul a {
 @media (max-width: 1171px) {
 }
 @media (max-width: 1195px) {
+  nav{
+    background-color: transparent;
+  }
   .social-icon-mobile {
     display: none;
   }
@@ -205,7 +208,7 @@ ul a {
     display: none;
   }
   .mobileLinks {
-    left: 40%;
+    left: 0%;
   }
 }
 @media (max-width: 830px) {
