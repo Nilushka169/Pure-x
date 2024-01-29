@@ -94,6 +94,7 @@ ul a {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
+  transition: 1s;
 
   font-family: "Roboto", serif;
   color: #333;
@@ -102,11 +103,11 @@ ul a {
   transition: transform 0.5s ease;
 }
 .nav-container:hover {
-  color: #ffffff;
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15px);
   border-radius: 25px;
-  transform: translate(0%, 10%);
+  transform: translate(0%, -10%) scale(1.05);
+  font-weight: 700;
   color: #f6931d;
 }
 .social-icon {
@@ -324,4 +325,25 @@ ul a {
   font-family: "BackgroundFont2", sans-serif;
   color: #ffffff;
   text-shadow: 0px 1px 5px rgba(0, 0, 0, 1);
+}
+.Bottom-section{
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+}
+.Bottom-section li{
+  display: block;
+  background-color: transparent;
+  color: #333;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 1);
+}
+.Bottom-section li:hover {
+  cursor: pointer;
+  background-color: #f6931d;
+  color: #ffffff;
+  font-weight: 700;
+  transform: scale(1.05);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
