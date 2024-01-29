@@ -90,9 +90,9 @@ label {
 input[type="submit"] {
   height: 5%;
   width: 160px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255,0.2);
   color: #f6931d;
-  border: 1px solid #f6931d;
+  border: 1px solid #ffffff;
   cursor: pointer;
   transition: background-color 0.4s;
   border-radius: 0.5rem;
@@ -107,9 +107,13 @@ input[type="submit"]:hover {
 }
 
 .validation-error {
-  color: #e74c3c;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1.3px;
   margin: auto;
+  background-color: #f90303;
   text-align: center;
+  padding: 5px;
 }
 
 .submission-success {
@@ -141,13 +145,14 @@ input[type="submit"]:hover {
 
   input,
 textarea {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    border: 1px solid rgb(255, 255, 255);
 }
 }
 
 textarea:focus,
 input:focus {
-  border-color: #f6931d; 
+  border-color: #333; 
   outline: none; 
 }
