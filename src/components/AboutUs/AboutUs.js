@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import "./AboutUs.css";
 import DataAnalytics from "./Icon/data-analytics.svg"
 import Nearshore from "./Icon/nearshore.svg"
@@ -54,12 +54,25 @@ function AboutUs() {
   ];
 
 
-
   const ref = useRef(null);
+  const [refAmount, setRefAmount] = useState(window.innerWidth < 768 ? 0.1 : 0.45);
 
-  const isInView = useInView(ref, {amount: 0.45 , once:true }) ;  //element eke 0.3 k penna thiyeddi animate wenn patan gnnwa
+  const handleResize = () => {
+    setRefAmount(window.innerWidth < 768 ? 0.1 : 0.45);
+  };
 
-   const container = {
+  useEffect(() => {
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const isInView = useInView(ref, { amount: refAmount, once: true });  //element eke 0.3 k penna thiyeddi animate wenn patan gnnwa
+
+  const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
       opacity: 1,
@@ -130,6 +143,7 @@ function AboutUs() {
       
       <section className='section2' ref={ref}>
       <h1 className='sectionTitle'><AnimatedTextCharacter text="&#60;Our Services&#47;&#62;"/></h1> 
+      <h1 className='hidden'>&#60;Our Services&#47;&#62;</h1>
 
                 <motion.ul
           className="OurServicesContainer"
@@ -161,6 +175,7 @@ function AboutUs() {
 
       <section className='section3'>
         <h1 className='sectionTitle'><AnimatedTextCharacter text='&#60;Tools and Technologies&#47;&#62;'/></h1>
+        <h1 className='hidden'>&#60;Tools and Technologies&#47;&#62;</h1>
           <div className='TechnologiesContainer'>
             <TabListFun/>
           </div>
@@ -271,6 +286,7 @@ function AboutUs() {
       </section>
       <section className='section5'>
         <h1 className='sectionTitle'><AnimatedTextCharacter text='&#60;Meet Our Experts&#47;&#62;'/></h1>
+        <h1 className='hidden'>&#60;Meet Our Experts&#47;&#62;</h1>
         <AboutUsCard/>
       </section>
     </div>

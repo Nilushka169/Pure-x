@@ -235,6 +235,7 @@ function Home() {
         transition={{ delay: 0.8, duration: 0.7 }}
         viewport={{ once: true }}
       >
+        <div className="LogoAndTitleContainer">
         <div className="leftSide">
           <img src={LogoSVG} alt="Logo" className="LogoSvgBG" />
         </div>
@@ -244,7 +245,7 @@ function Home() {
           </div>
           <div className="slogan">SOLUTIONS</div>
         </div>
-
+        </div>
         <motion.div
           className="Bottom-section"
           initial={{ opacity: 0, scale: 0.6, filter: "blur(5px)" }}
