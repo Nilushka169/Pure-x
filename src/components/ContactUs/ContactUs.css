@@ -124,8 +124,27 @@ input[type="submit"]:hover {
   .SvgContainer {
     display: none;
   }
-}
+  .ContactUs-page {
+    background: url(../../image/contact.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .contact-container {
+    backdrop-filter: blur(70px); /* Fix the typo here */
+    background: transparent;
+  }
 
+  .contact-form {
+    background: transparent;
+    backdrop-filter: blur(10px);
+  }
+
+  input,
+textarea {
+  background: transparent;
+    backdrop-filter: blur(10px);
+}
+}
 
 textarea:focus,
 input:focus {
