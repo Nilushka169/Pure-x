@@ -158,7 +158,8 @@ ul a {
     display: flex;
     align-items: center;
     font-size: 29px;
-    color: rgb(0, 0, 0);
+    color: #8a8686;
+    
     cursor: pointer;
   }
   .navbar-container {
@@ -248,6 +249,11 @@ ul a {
     top: 15px;
     right: 25px;
   }
+  .Middle-section .slogan{
+    font-size: 0.3rem;
+    letter-spacing: 5px;
+    
+  }
 }
 @media (max-width: 315px) {
   nav {
@@ -288,10 +294,12 @@ ul a {
   font-family: "BackgroundFont3", sans-serif;
 }
 .Middle-section .slogan {
-  font-size: 250%;
-  /* letter-spacing: 17px; */
+  font-size: 2rem;
+  letter-spacing: 43px;
   font-family: "BackgroundFont2", sans-serif;
   color: #ffffff;
+  justify-content: center;
+  padding-inline-start: 35px;
   /* text-shadow: 0px 1px 5px rgba(0, 0, 0, 1); */
   text-align: center;
 }
@@ -329,9 +337,15 @@ ul a {
   display: flex;
   margin: auto;
 }
+
 @media all and (max-width: 950px) {
   .Middle-section .companyName{
     font-size: 7.8rem;
+  }
+  .Middle-section .slogan{
+    font-size: 2rem;
+    letter-spacing: 25px;
+    padding-inline-start: 15px;
   }
 
    .Bottom-section{
@@ -346,6 +360,11 @@ ul a {
     flex-direction: column;
     margin: auto;
   }
+  .Middle-section .slogan{
+    font-size: 1.5rem;
+    letter-spacing: 25px;
+    
+  }
   .leftSide{
   width: 60%;
   margin: auto;
@@ -359,6 +378,12 @@ ul a {
   .Middle-section .companyName{
     font-size: 4rem;
   }
+  .Middle-section .slogan{
+    font-size: 1rem;
+    letter-spacing: 14px;
+    
+  }
+
     .LogoAndTitleContainer{
     flex-direction: column;
     margin: auto;
