@@ -189,6 +189,7 @@ function AboutUs() {
                   <CountUp className='counter'
                       enableScrollSpy={true}
                       scrollSpyDelay={1000}
+                      scrollSpyOnce={true}
                       start={0}
                       end={4}
                       duration={2}
@@ -213,6 +214,7 @@ function AboutUs() {
                 <CountUp className='counter'
                         enableScrollSpy={true}
                         scrollSpyDelay={1000}
+                        scrollSpyOnce={true}
                         start={0}
                         end={80}
                         duration={2}
@@ -230,6 +232,7 @@ function AboutUs() {
                 <CountUp className='counter'
                         enableScrollSpy={true}
                         scrollSpyDelay={1000}
+                        scrollSpyOnce={true}
                         start={0}
                         end={170}
                         duration={2}
@@ -246,9 +249,10 @@ function AboutUs() {
             </div>
             <div className='aside Right'>
               <div className='counterContainer'>
-               <CountUp className='counter'
+              <CountUp className='counter'
                       enableScrollSpy={true}
                       scrollSpyDelay={1000}
+                      scrollSpyOnce={true}
                       start={0}
                       end={8}
                       duration={2}
@@ -263,9 +267,10 @@ function AboutUs() {
                   <h3>SKILLED DEVELOPERS</h3>
                   </div>
                   <div className='counterContainer'>
-               <CountUp className='counter'
+              <CountUp className='counter'
                       enableScrollSpy={true}
                       scrollSpyDelay={1000}
+                      scrollSpyOnce={true}
                       start={0}
                       end={4.9}
                       duration={2}
