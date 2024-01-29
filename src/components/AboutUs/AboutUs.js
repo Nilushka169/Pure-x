@@ -125,177 +125,190 @@ function AboutUs() {
 
 
   return (
-    <div className='AboutUS-main-container' id="aboutus">
-      <section className='section1'>
-        <div className='AboutUsTitleContainer'>
-          <div className='AboutUsTitle'>
+    <div className="AboutUS-main-container" id="aboutus">
+      <section className="section1">
+        <div className="AboutUsTitleContainer">
+          <div className="AboutUsTitle">
             <h3>About Pure-X</h3>
-            <h1>Bringing the </h1><br/>
-            <h1>World Closer</h1><br/>
+            <h1>Bringing the </h1>
+            <br />
+            <h1>World Closer</h1>
+            <br />
             <h1>with Nearshore</h1>
-            <br/>
-            <h3>We hatch ideas into software solutions <br/>that achieve your desired outcomes <br/>faster.</h3>
+            <br />
+            <h3>
+              We hatch ideas into software solutions <br />
+              that achieve your desired outcomes <br />
+              faster.
+            </h3>
           </div>
-
         </div>
       </section>
 
-      
-      <section className='section2' ref={ref}>
-      <h1 className='sectionTitle'><AnimatedTextCharacter text="&#60;Our Services&#47;&#62;"/></h1> 
-      <h1 className='hidden'>&#60;Our Services&#47;&#62;</h1>
+      <section className="section2" ref={ref}>
+        <h1 className="sectionTitle">
+          <AnimatedTextCharacter text="&#60;Our Services&#47;&#62;" />
+        </h1>
+        <h1 className="hiddenText">&#60;Our Services&#47;&#62;</h1>
 
-                <motion.ul
+        <motion.ul
           className="OurServicesContainer"
-          
           variants={container}
           initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}  // 0.5k penna awoth visible wenwa naththm hidden wenwa
+          animate={isInView ? "visible" : "hidden"} // 0.5k penna awoth visible wenwa naththm hidden wenwa
         >
           {serviceCardsData.map((card, index) => (
-            <motion.li key={index} className="ServiceCardContainer" variants={item}>
-              
-                <motion.img src={card.icon} alt={`Service Card ${index + 1}`} variants={ImageAnime}/>   
-                <motion.h1 key={index} variants={Title}>
-
-                  {card.title}
-
-                </motion.h1>
-                <motion.h2 key={index} variants={Title}>
-
-                  {card.description}
-
-                </motion.h2>
-                </motion.li>
+            <motion.li
+              key={index}
+              className="ServiceCardContainer"
+              variants={item}
+            >
+              <motion.img
+                src={card.icon}
+                alt={`Service Card ${index + 1}`}
+                variants={ImageAnime}
+              />
+              <motion.h1 key={index} variants={Title}>
+                {card.title}
+              </motion.h1>
+              <motion.h2 key={index} variants={Title}>
+                {card.description}
+              </motion.h2>
+            </motion.li>
           ))}
         </motion.ul>
-
       </section>
 
-
-      <section className='section3'>
-        <h1 className='sectionTitle'><AnimatedTextCharacter text='&#60;Tools and Technologies&#47;&#62;'/></h1>
-        <h1 className='hidden'>&#60;Tools and Technologies&#47;&#62;</h1>
-          <div className='TechnologiesContainer'>
-            <TabListFun/>
+      <section className="section3">
+        <h1 className="sectionTitle">
+          <AnimatedTextCharacter text="&#60;Tools and Technologies&#47;&#62;" />
+        </h1>
+        <h1 className="hiddenText">&#60;Tools and Technologies&#47;&#62;</h1>
+        <div className="TechnologiesContainer">
+          <TabListFun />
+        </div>
+      </section>
+      <section className="section4">
+        <h1 className="sectionTitle">
+          <AnimatedTextCharacter text="&#60;A Treak Record Of Excellence And Happy Customers&#47;&#62;" />
+        </h1>
+        <h1 className="hiddenText">
+          &#60;A Treak Record Of Excellence And Happy Customers&#47;&#62;
+        </h1>
+        <div className="PercentageContainer">
+          <div className="Top">
+            <div className="counterContainer">
+              <CountUp
+                className="counter"
+                enableScrollSpy={true}
+                scrollSpyDelay={1000}
+                scrollSpyOnce={true}
+                start={0}
+                end={4}
+                duration={2}
+                delay={0.2}
+                separator=" "
+                decimals={0}
+                decimal=","
+                prefix=" " //left side of counter
+                suffix="" //right side of counter
+              ></CountUp>
+              <h3>Years of Experience</h3>
+            </div>
           </div>
-      </section>
-      <section className='section4'>
-        <h1 className='sectionTitle'><AnimatedTextCharacter text='&#60;A Treak Record Of Excellence And Happy Customers&#47;&#62;'/></h1>
-        <h1 className='hidden'>&#60;A Treak Record Of Excellence And Happy Customers&#47;&#62;</h1>
-          <div className='PercentageContainer'>
-            <div className='Top'>
-              <div className='counterContainer'>
-                  <CountUp className='counter'
-                      enableScrollSpy={true}
-                      scrollSpyDelay={1000}
-                      scrollSpyOnce={true}
-                      start={0}
-                      end={4}
-                      duration={2}
-                      delay={0.2}
-                      separator=" "
-                      decimals={0}
-                      decimal=","
-                      prefix=" "   //left side of counter
-                      suffix=""     //right side of counter
-                      >
-                  </CountUp>
-                  <h3>Years of Experience</h3>
-                  </div>
+          <div className="Middle">
+            <div className="ImgContainer">
+              <img src={journey} alt="journey" />
             </div>
-            <div className='Middle'>
-              <div className='ImgContainer'>
-                <img src={journey} alt='journey'/>
-              </div>
-            </div>
-            <div className='aside Left'>
-              <div className='counterContainer'>
-                <CountUp className='counter'
-                        enableScrollSpy={true}
-                        scrollSpyDelay={1000}
-                        scrollSpyOnce={true}
-                        start={0}
-                        end={80}
-                        duration={2}
-                        delay={0.3}
-                        separator=" "
-                        decimals={0}
-                        decimal=","
-                        prefix=" "   //left side of counter
-                        suffix="+"     //right side of counter
-                        >
-                    </CountUp>
-                    <h3>Clients</h3>
-                  </div>
-                  <div className='counterContainer'>
-                <CountUp className='counter'
-                        enableScrollSpy={true}
-                        scrollSpyDelay={1000}
-                        scrollSpyOnce={true}
-                        start={0}
-                        end={170}
-                        duration={2}
-                        delay={0.3}
-                        separator=" "
-                        decimals={0}
-                        decimal=","
-                        prefix=" "   //left side of counter
-                        suffix="+"     //right side of counter
-                        >
-                    </CountUp>
-                    <h3>SUCCESSFULLY PROJECT</h3>
-                  </div>
-            </div>
-            <div className='aside Right'>
-              <div className='counterContainer'>
-              <CountUp className='counter'
-                      enableScrollSpy={true}
-                      scrollSpyDelay={1000}
-                      scrollSpyOnce={true}
-                      start={0}
-                      end={8}
-                      duration={2}
-                      delay={0.3}
-                      separator=" "
-                      decimals={0}
-                      decimal=","
-                      prefix=" "   //left side of counter
-                      suffix=""     //right side of counter
-                      >
-                  </CountUp>
-                  <h3>SKILLED DEVELOPERS</h3>
-                  </div>
-                  <div className='counterContainer'>
-              <CountUp className='counter'
-                      enableScrollSpy={true}
-                      scrollSpyDelay={1000}
-                      scrollSpyOnce={true}
-                      start={0}
-                      end={4.9}
-                      duration={2}
-                      delay={0.3}
-                      separator=" "
-                      decimals={1}
-                      decimal="."
-                      prefix=" "   //left side of counter
-                      suffix="/5"     //right side of counter
-                      >
-                  </CountUp>
-                  <h3>Rating</h3>
-                  </div>
-                  
-            </div>
-            {/* <div className='Bottom'>Bottom</div> */}
           </div>
+          <div className="aside Left">
+            <div className="counterContainer">
+              <CountUp
+                className="counter"
+                enableScrollSpy={true}
+                scrollSpyDelay={1000}
+                scrollSpyOnce={true}
+                start={0}
+                end={80}
+                duration={2}
+                delay={0.3}
+                separator=" "
+                decimals={0}
+                decimal=","
+                prefix=" " //left side of counter
+                suffix="+" //right side of counter
+              ></CountUp>
+              <h3>Clients</h3>
+            </div>
+            <div className="counterContainer">
+              <CountUp
+                className="counter"
+                enableScrollSpy={true}
+                scrollSpyDelay={1000}
+                scrollSpyOnce={true}
+                start={0}
+                end={170}
+                duration={2}
+                delay={0.3}
+                separator=" "
+                decimals={0}
+                decimal=","
+                prefix=" " //left side of counter
+                suffix="+" //right side of counter
+              ></CountUp>
+              <h3>SUCCESSFULLY PROJECT</h3>
+            </div>
+          </div>
+          <div className="aside Right">
+            <div className="counterContainer">
+              <CountUp
+                className="counter"
+                enableScrollSpy={true}
+                scrollSpyDelay={1000}
+                scrollSpyOnce={true}
+                start={0}
+                end={8}
+                duration={2}
+                delay={0.3}
+                separator=" "
+                decimals={0}
+                decimal=","
+                prefix=" " //left side of counter
+                suffix="" //right side of counter
+              ></CountUp>
+              <h3>SKILLED DEVELOPERS</h3>
+            </div>
+            <div className="counterContainer">
+              <CountUp
+                className="counter"
+                enableScrollSpy={true}
+                scrollSpyDelay={1000}
+                scrollSpyOnce={true}
+                start={0}
+                end={4.9}
+                duration={2}
+                delay={0.3}
+                separator=" "
+                decimals={1}
+                decimal="."
+                prefix=" " //left side of counter
+                suffix="/5" //right side of counter
+              ></CountUp>
+              <h3>Rating</h3>
+            </div>
+          </div>
+          {/* <div className='Bottom'>Bottom</div> */}
+        </div>
       </section>
-      <section className='section5'>
-        <h1 className='sectionTitle'><AnimatedTextCharacter text='&#60;Meet Our Experts&#47;&#62;'/></h1>
-        <h1 className='hidden'>&#60;Meet Our Experts&#47;&#62;</h1>
-        <AboutUsCard/>
+      <section className="section5">
+        <h1 className="sectionTitle">
+          <AnimatedTextCharacter text="&#60;Meet Our Experts&#47;&#62;" />
+        </h1>
+        <h1 className="hidden">&#60;Meet Our Experts&#47;&#62;</h1>
+        <AboutUsCard />
       </section>
     </div>
-  )
+  );
 }
 
 export default AboutUs;

@@ -231,8 +231,8 @@ ul a {
     display: none;
   }
   .mobileLinks {
-
-    left: -180px;
+    width: 100%;
+  left: auto;
   }
   .topic {
     font-size: 30px;
@@ -241,7 +241,7 @@ ul a {
     width: 100%;
   }
   .dropdownmenu {
-    position: absolute;
+    position: relative;
     top: 15px;
     right: 25px;
   }
