@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import "./AboutUs.css";
 import DataAnalytics from "./Icon/data-analytics.svg"
 import Nearshore from "./Icon/nearshore.svg"
@@ -77,7 +77,7 @@ function AboutUs() {
       y: 0,
       opacity: 1,
       transition: {
-        delayChildren: 0.5,
+        delayChildren: 0.1,
         staggerChildren: 0.2,
       }
     }
@@ -91,7 +91,7 @@ function AboutUs() {
     opacity:1,
 
     transition:{
-      duration:0.5
+      duration:0.3
     },
   },
  };
@@ -105,7 +105,7 @@ function AboutUs() {
     opacity:1,
     y:0,
     transition:{
-      duration:0.5
+      duration:0.2
     }
   }
  }
@@ -141,13 +141,13 @@ function AboutUs() {
           {serviceCardsData.map((card, index) => (
             <motion.li key={index} className="ServiceCardContainer" variants={item}>
               
-                <motion.img src={card.icon} alt={`Service Card ${index + 1}`} /* variants={ImageAnime} *//>   
-                <motion.h1 /* key={index} variants={Title} */>
+                <motion.img src={card.icon} alt={`Service Card ${index + 1}`} variants={ImageAnime}/>   
+                <motion.h1 key={index} variants={Title}>
 
                   {card.title}
 
                 </motion.h1>
-                <motion.h2 /* key={index} variants={Title} */>
+                <motion.h2 key={index} variants={Title}>
 
                   {card.description}
 

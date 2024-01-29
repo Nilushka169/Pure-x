@@ -75,6 +75,7 @@ textarea {
 
 textarea {
   height: 150px; /* Adjust the height as needed */
+  resize: none;
 }
 
 .input-group-submit {
@@ -92,7 +93,7 @@ input[type="submit"] {
   width: 160px;
   background-color: rgb(255, 255, 255,0.2);
   color: #f6931d;
-  border: 1px solid #ffffff;
+  border: 1px solid #ccc;
   cursor: pointer;
   transition: background-color 0.4s;
   border-radius: 0.5rem;
