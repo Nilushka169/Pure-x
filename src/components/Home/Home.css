@@ -346,4 +346,9 @@ ul a {
   font-weight: 700;
   transform: scale(1.05);
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: 0.6s;
+}
+.contactUsButton{
+  padding: 15px;
 }

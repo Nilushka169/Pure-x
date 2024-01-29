@@ -134,7 +134,7 @@ function Home() {
                 spy={true}
                 smooth={true}
                 offset={0}
-                duration={750}
+                duration={900}
               >
                 <li
                   className={`nav-container ${
@@ -150,7 +150,7 @@ function Home() {
                 spy={true}
                 smooth={true}
                 offset={0}
-                duration={750}
+                duration={1500}
               >
                 <li
                   className={`nav-container ${
@@ -244,23 +244,30 @@ function Home() {
           </div>
           <div className="slogan">SOLUTIONS</div>
         </div>
-      </motion.div>
-      <motion.div
-        className="Bottom-section"
-        initial={{ opacity: 0, scale: 0.6, filter: "blur(5px)" }}
-        whileInView={{ opacity: 1.5, scale: 1, filter: "blur(0px)" }}
-        transition={{ delay: 1.2, duration: 0.7 }}
-        viewport={{ once: true }}
-      >
-        <Link to="contactus" spy={true} smooth={true} offset={0} duration={750}>
-          <li
-            className={`nav-container ${
-              scrollPosition >= 50 ? "scrolled" : ""
-            }`}
+
+        <motion.div
+          className="Bottom-section"
+          initial={{ opacity: 0, scale: 0.6, filter: "blur(5px)" }}
+          whileInView={{ opacity: 1.5, scale: 1, filter: "blur(0px)" }}
+          transition={{ delay: 1.2, duration: 0.7 }}
+          viewport={{ once: true }}
+        >
+          <Link
+            to="contactus"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1500}
           >
-            Contact Us
-          </li>
-        </Link>
+            <li
+              className={`contactUsButton ${
+                scrollPosition >= 50 ? "scrolled" : ""
+              }`}
+            >
+              Contact Us
+            </li>
+          </Link>
+        </motion.div>
       </motion.div>
     </div>
   );
