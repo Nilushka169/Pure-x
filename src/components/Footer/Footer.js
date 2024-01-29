@@ -2,10 +2,6 @@ import React, { useRef, useState, useEffect } from 'react';
 import "./Footer.css";
 import {motion, useInView } from "framer-motion";
 
-
-
-
-
 function Footer() {
 
 const ref = useRef(null);
