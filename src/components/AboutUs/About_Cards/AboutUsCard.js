@@ -195,11 +195,11 @@ function AboutUsCard() {
                     </p>
                   </div>
                   <div className="backContainer">
-                    <img
+                    {<img
                       src={item.profile.picture}
                       className="profilePic"
                       alt="profile"
-                    />
+                    />}
                   </div>
                 </div>
               </div>
