@@ -304,7 +304,7 @@ function AboutUs() {
         <h1 className="sectionTitle">
           <AnimatedTextCharacter text="&#60;Meet Our Experts&#47;&#62;" />
         </h1>
-        <h1 className="hidden">&#60;Meet Our Experts&#47;&#62;</h1>
+        <h1 className="hiddenText">&#60;Meet Our Experts&#47;&#62;</h1>
         <AboutUsCard />
       </section>
     </div>
